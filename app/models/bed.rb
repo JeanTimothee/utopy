@@ -1,4 +1,4 @@
 class Bed < ApplicationRecord
   belongs_to :hostel
-  belongs_to :booking
+  has_many :beds_bookings, dependent: :destroy
 end

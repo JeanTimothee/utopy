@@ -10,17 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_17_094955) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_18_094844) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beds", force: :cascade do |t|
+    t.integer "number"
     t.bigint "hostel_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hostel_id"], name: "index_beds_on_hostel_id"
+  end
+
+  create_table "beds_bookings", force: :cascade do |t|
+    t.bigint "bed_id", null: false
     t.bigint "booking_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["booking_id"], name: "index_beds_on_booking_id"
-    t.index ["hostel_id"], name: "index_beds_on_hostel_id"
+    t.index ["bed_id"], name: "index_beds_bookings_on_bed_id"
+    t.index ["booking_id"], name: "index_beds_bookings_on_booking_id"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -75,8 +83,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_17_094955) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "beds", "bookings"
   add_foreign_key "beds", "hostels"
+  add_foreign_key "beds_bookings", "beds"
+  add_foreign_key "beds_bookings", "bookings"
   add_foreign_key "bookings", "users"
   add_foreign_key "pricings", "hostels"
 end

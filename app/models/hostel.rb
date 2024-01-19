@@ -1,4 +1,4 @@
 class Hostel < ApplicationRecord
-  has_many :beds
-  has_one :pricing
+  has_many :beds, dependent: :destroy
+  has_one :pricing, dependent: :destroy
 end

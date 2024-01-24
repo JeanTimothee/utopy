@@ -1,2 +1,34 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="video-container">
+  <%= video_tag 'teaser', loop:true, autoplay: true, muted:true %>
+</div>
+<div class="container">
+  <section class="accueil">
+    <h1>«Welcome Home»</h1>
+    <p>Utopy c’est une expérience unique sur la côte basque alliant découverte et partage entre voyageurs du monde entier. Installez-vous comme à la maison dans nos hostels conviviaux et entièrement équipés pour votre plus grand confort. Profitez comme bon vous semble de votre nouveau chez vous, vivez à votre rythme, partagez, rencontrez, échappez-vous et détendez-vous…tout cela à Biarritz, l’une des plus belles villes de surf du monde. Chez Utopy, chaque instant est une nouvelle aventure qui fait de notre auberge un lieu exceptionnel pour tous les voyageurs en quête de l'utopie du voyage.
+    </p>
+  </section>
+</div>
+<section class="map">
+  <div style="width: 100vw; height: 70vh;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</section>
+<div class="container">
+  <section class="hostels">
+    <div class="coast">
+    <%= image_tag 'coast_full.png' %>
+    <div class="content">
+      <%= image_tag 'coast_banner_1.jpg' %>
+      <div class="d-flex">
+        <%= image_tag 'coast_bedroom_1.jpg' %>
+        <div>
+          <%= image_tag 'coast_banner_2.jpg' %>
+          <%= image_tag 'coast_bathroom_1.jpg' %>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'hostels/show'
+  get 'bookings/create'
   devise_for :users
   root to: "pages#home"
   resources :hostels, only: [:show] do

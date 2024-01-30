@@ -1,34 +1,107 @@
-<div class="video-container">
+<section id="video-container">
   <%= video_tag 'teaser', loop:true, autoplay: true, muted:true %>
-</div>
+  <%# # <%= image_tag 'video_screen' %>
+</section>
 <div class="container">
   <section class="accueil">
-    <h1>«Welcome Home»</h1>
-    <p>Utopy c’est une expérience unique sur la côte basque alliant découverte et partage entre voyageurs du monde entier. Installez-vous comme à la maison dans nos hostels conviviaux et entièrement équipés pour votre plus grand confort. Profitez comme bon vous semble de votre nouveau chez vous, vivez à votre rythme, partagez, rencontrez, échappez-vous et détendez-vous…tout cela à Biarritz, l’une des plus belles villes de surf du monde. Chez Utopy, chaque instant est une nouvelle aventure qui fait de notre auberge un lieu exceptionnel pour tous les voyageurs en quête de l'utopie du voyage.
+    <h1 class="title-home">Welcome Home</h1>
+    <p><strong>Utopy</strong> c’est une expérience unique sur la côte basque alliant découverte et partage entre voyageurs du monde entier. Installez-vous comme à la maison dans nos hostels conviviaux et entièrement équipés pour votre plus grand confort. Profitez comme bon vous semble de votre nouveau chez vous, vivez à votre rythme, partagez, rencontrez, échappez-vous et détendez-vous…tout cela à Biarritz, l’une des plus belles villes de surf du monde. Chez <strong>Utopy</strong>, chaque instant est une nouvelle aventure qui fait de notre auberge un lieu exceptionnel pour tous les voyageurs en quête de l'utopie du voyage.
     </p>
   </section>
 </div>
 <section class="map">
-  <div style="width: 100vw; height: 70vh;"
+  <div style="width: 100vw; height: 50vh;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </section>
-<div class="container">
-  <section class="hostels">
-    <div class="coast">
-    <%= image_tag 'coast_full.png' %>
-    <div class="content">
-      <%= image_tag 'coast_banner_1.jpg' %>
-      <div class="d-flex">
-        <%= image_tag 'coast_bedroom_1.jpg' %>
-        <div>
-          <%= image_tag 'coast_banner_2.jpg' %>
-          <%= image_tag 'coast_bathroom_1.jpg' %>
+
+<section id="hostels" class="pt-4 container">
+  <div class="coast col-sm-5">
+    <%= image_tag 'coast_full.png', class:'w-100 img-banner' %>
+    <div class="coast-background content container pb-4">
+      <%= image_tag 'coast_banner_1.jpg', class:'w-100 pb-2' %>
+      <div class="d-flex justify-between">
+        <%= image_tag 'coast_bedroom_1.jpg', class:'w-50 pe-1' %>
+        <div class="w-50 ps-1">
+          <%= image_tag 'coast_banner_2.jpg', class:'w-100 pb-1' %>
+          <%= image_tag 'coast_bathroom_1.jpg', class:'w-100 pt-1' %>
         </div>
       </div>
+      <p class="my-4">Idéalement situé sur les hauteurs de la côte des basques, <strong>Coast</strong> vous accueille dans un décor terracotta. Laissez-vous porter par la magie du lieu, échangez avec les autres voyageurs autour d’un bon café, puis attrapez votre surf direction les vagues de la côte pour votre meilleure session! Plongez dans l’univers accueillant de <strong>Coast</strong>, où chaque détail a été soigneusement pensé pour créer une atmosphère chaleureuse et relaxante, vous assurant ainsi une expérience de séjour inoubliable.
+      </p>
+      <%= link_to hostel_path(Hostel.find_by(name:'Coast')), class:'book-btn' do %>
+        <h3>Book Coast</h3>
+      <% end %>
     </div>
+  </div>
+    <div class="garden col-sm-5">
+    <%= image_tag 'garden_full.png', class:'w-100 img-banner' %>
+    <div class="garden-background content container">
+      <%= image_tag 'garden_banner_1.jpg', class:'w-100 pb-2' %>
+      <div class="d-flex justify-between">
+        <%= image_tag 'garden_bedroom_1.jpg', class:'w-50 pe-1' %>
+        <div class="w-50 ps-1">
+          <%= image_tag 'garden_banner_2.jpg', class:'w-100 pb-1' %>
+          <%= image_tag 'garden_bathroom_1.jpg', class:'w-100 pt-1' %>
+        </div>
+      </div>
+      <p class="my-4">C’est dans un environnement plus calme que <strong>Garden</strong> vous ouvre ses portes. Vous entrez dans une ambiance « beach house » sous ses tons navy, découvrez un lieu confortable et agréable, puis laissez-vous charmer par la tranquillité de son jardin. La position centrale de l’hostel entre plages, centre-ville, gare et aéroport facilitera vos déplacements. <strong>Garden</strong> vous offre une expérience d'hébergement unique, idéale pour ceux qui recherchent une interaction sociale enrichissante et un budget maîtrisé.
+      </p>
+      <%= link_to hostel_path(Hostel.find_by(name:'Garden')), class:'book-btn' do %>
+        <h3>Book Garden</h3>
+      <% end %>
     </div>
-  </section>
-</div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <h1 class="title-home">Contactez-nous</h1>
+    <form action="" method="post" accept-charset="UTF-8" id="contact-form" class="form-horizontal col-sm-6" role="form">
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="text" class="input-form" id="name" placeholder="Nom" name="name" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="email" class="input-form" id="email" placeholder="Email" name="email" value="" required>
+        </div>
+      </div>
+
+      <textarea class="input-form" rows="10" placeholder="Message..." name="message" required></textarea>
+
+      <button class="btn send-button" id="submit" type="submit" value="SEND">
+        <div class="alt-send-button d-flex justify-content-around align-items-center">
+          <!-- <i class="fa fa-paper-plane"></i> -->
+          <span class="send-text">ENVOYER</span>
+        </div>
+        <!-- anti spam -->
+        <div style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;" aria-hidden="true">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+        </div>
+
+      </button>
+
+    </form>
+  </div>
+</section>
+<section id='about-us'>
+  <div class="container">
+    <h1 class="title-home">About us</h1>
+    <p><strong>Utopy</strong> c’est une aventure imaginée par deux amies d’enfance pendant leurs années lycée. Notre vision était de créer un lieu idéal qui rassemble nos passions communes : les amis, l'aventure et le voyage. Après avoir obtenu nos diplômes dans le domaine du tourisme, nous nous sommes lancées dans la quête d'expériences uniques à travers le monde. Ce qui nous a conduites à découvrir, étudier et approuver un type d'hébergement particulier: l’hostel. Un lieu propice aux échanges, aux rencontres, à la bonne humeur, tout cela en restant accessible aux budgets les plus modestes. C’est avec notre équipe, pas plus grande que nous deux, que nous avons fondé notre entreprise : « <strong>Utopy Hostel</strong> ». Et ainsi gouté à toutes les joies de l'entrepreneuriat : business plan, mairies, banques, agences immobilières, partenaires. Puis les travaux, nous amenant à endosser des rôles de peintre, carreleuse, ébéniste, électricienne, décoratrice, tout en jonglant avec les responsabilités de comptable, chargée de communication et rédactrice. Mais c'est possible! Un périple aussi intense que passionnant qui a abouti à la concrétisation de notre rêve : la création de lieux confortables et conviviaux, fidèles à notre vision initiale. Une utopie peut parfois devenir bien réelle !
+      <strong>Utopy Hostel</strong> a ouvert ses portes en mars 2022. Et c’est grâce à vous, nos merveilleux clients, que cette aventure est si belle aujourd’hui. En espérant la continuer encore des années à vos côtés !
+    </p>
+    <div>
+      <div class="d-flex align-items-center mb-4">
+        <p class="col-7 mb-0"><strong>Pourquoi « Utopy » ?</strong></p>
+        <%= image_tag 'meeting_place', class:'col-5' %>
+      </div>
+      <p>Utopy, c’est une petite stylisation de notre part du mot utopie qui veut dire « société idéale rêvée » et qui vient du grec eu-topo signifiant « bon lieu ». Notre logo, rappelle le symbole aborigène australien qui signifie « meeting place » traduit par « lieu de rencontre » en français. Un clin d’œil à ce pays où notre projet a pris vie.
+      </p>
+    </div>
+  </div>
+</section>

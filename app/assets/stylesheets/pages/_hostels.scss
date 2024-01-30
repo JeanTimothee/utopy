@@ -1,0 +1,38 @@
+.coast-background {
+  background-color: $orange;
+}
+
+.garden-background {
+  background-color: $blue;
+}
+
+#hostels p {
+  color: $white;
+}
+
+.img-banner {
+  border-radius: 50% 50% 0 0;
+}
+
+.garden {
+  margin-top: 1.5rem;
+}
+
+.garden-background {
+  padding-bottom: 1.5rem;
+}
+
+#hostels img {
+  object-fit: cover;
+}
+
+@media screen and (min-width: 568px) {
+  #hostels {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .garden {
+    margin-top: 0;
+  }
+}

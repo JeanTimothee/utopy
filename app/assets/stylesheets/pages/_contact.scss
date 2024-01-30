@@ -1,0 +1,32 @@
+.input-form {
+  width: 100%;
+  border: 1px solid $black;
+  background-color: $white;
+  margin-bottom: 8px;
+  padding: 8px;
+  textarea {
+    height: 20vh;
+  }
+}
+
+.input-form:focus-visible {
+  outline: none!important;
+  border-color: solid 1px grey;
+}
+
+#contact form {
+  position: relative;
+}
+
+.send-button {
+  position: absolute;
+  bottom: -2%;
+  right: 10%;
+  padding: 10px 30px;
+  color: white;
+  background-color: black;
+}
+
+#contact-form {
+  margin: auto;
+}

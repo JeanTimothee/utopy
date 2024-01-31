@@ -49,12 +49,16 @@
 }
 
 @media screen and (min-width: 568px) {
-  h1 {
+  #hostel h1 {
     display: none;
   }
   .banner-show img {
     margin-top: 4rem;
     height: 50vh;
     object-fit: cover;
+  }
+  #hostel {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }

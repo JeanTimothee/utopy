@@ -1,4 +1,57 @@
 #booking-modal-1 {
   width: 100vw;
   background-color: $white;
+  // padding: 20px 0;
+}
+.book-btn-modal {
+  font-family: 'KoHo';
+  font-size: 24px;
+  color: $white;
+  background-color: $orange;
+  width: 100%;
+}
+
+.flatpickr-calendar {
+  margin: auto;
+}
+
+.booking_number_of_beds {
+  display: flex;
+  justify-content: space-between;
+  select {
+    width: 30%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+}
+
+.simple_form.new_booking {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#booking-modal-desktop {
+  display: none;
+  background-color: $white;
+  height: 484px;
+}
+
+@media screen and (min-width: 568px) {
+  #booking-modal-desktop {
+    display: block;
+  }
+
+  .simple_form.new_booking {
+    padding-top: 8px;
+  }
+
+  #booking-modal-desktop {
+    // width: 100%;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+  }
 }

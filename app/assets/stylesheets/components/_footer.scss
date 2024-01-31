@@ -11,6 +11,7 @@
 }
 
 .book-btn-show {
+  cursor: pointer;
   h3 {
     text-align: center;
     width: 40vw;
@@ -18,5 +19,11 @@
     padding: 8px;
     color: $white;
     margin: auto;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  #footer {
+    display: none;
   }
 }

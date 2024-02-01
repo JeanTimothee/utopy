@@ -1,24 +1,24 @@
 <div id="hostel" class="<%= @hostel.name.downcase %>-background">
   <h1><%= @hostel.name.upcase %></h1>
   <div class="banner-show container">
-    <%= image_tag "#{@hostel.name.downcase}_banner_1" %>
+    <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_banner_1" %>
   </div>
   <div class="container cards">
     <div class="col-sm-6">
       <div class="amenities-card">
         <div class="d-flex justify-content-between">
           <div class="col-5">
-            <%= image_tag "#{@hostel.name.downcase}_bedroom_1", class:"photo" %>
+            <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_bedroom_1", class:"photo" %>
           </div>
           <div class="col-6 d-flex flex-column justify-content-around">
             <h3>DORTOIRS</h3>
             <div class="icons d-flex flex-column justify-content-around">
               <div class="d-flex justify-content-between align-items-center">
-                <%# <%= image_tag 'bunk-bed', class:'col-3' %>
+                <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
                 <i class="fa-solid fa-bed col-3"></i>
                 <i class="fa-regular fa-lightbulb col-3"></i>
                 <i class="fa-solid fa-box-archive col-3"></i>
-                <%# <%= image_tag 'lockers', class:'col-3' %>
+                <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <% if @hostel.name == "Garden" %>
@@ -44,11 +44,11 @@
             <h3>ESPACES COMMUNS</h3>
             <div class="icons d-flex flex-column justify-content-around">
               <div class="d-flex justify-content-between align-items-center">
-                <%# <%= image_tag 'bunk-bed', class:'col-3' %>
+                <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
                 <i class="fa-solid fa-kitchen-set col-3"></i>
                 <i class="fa-solid fa-couch col-3"></i>
                 <i class="fa-solid fa-shower col-3"></i>
-                <%# <%= image_tag 'lockers', class:'col-3' %>
+                <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
               </div>
               <div class="d-flex justify-content-around align-items-center">
                 <i class="fa-solid fa-fan col-3"></i>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="col-5">
-            <%= image_tag "#{@hostel.name.downcase}_kitchen", class:"photo" %>
+            <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_kitchen", class:"photo" %>
           </div>
         </div>
         <% if @hostel.name == "Garden" %>
@@ -72,13 +72,13 @@
       <div class="amenities-card">
         <div class="d-flex justify-content-between">
           <div class="col-5">
-            <%= image_tag "#{@hostel.name.downcase}_kitchen", class:"photo" %>
+            <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_kitchen", class:"photo" %>
           </div>
           <div class="col-6 d-flex flex-column justify-content-around">
             <h3>PROXIMITE</h3>
             <div class="icons d-flex flex-column justify-content-around">
               <div class="d-flex justify-content-between align-items-center">
-                <%# <%= image_tag 'bunk-bed', class:'col-3' %>
+                <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
                 <i class="fa-solid fa-cart-shopping col-3"></i>
                 <% if @hostel.name == "Garden" %>
                   <i class="fa-solid fa-bicycle col-3"></i>
@@ -86,7 +86,7 @@
                   <i class="fa-solid fa-martini-glass col-3"></i>
                 <% end %>
                 <i class="fa-solid fa-utensils col-3"></i>
-                <%# <%= image_tag 'lockers', class:'col-3' %>
+                <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <i class="fa-solid fa-bus col-3"></i>
@@ -111,11 +111,11 @@
         <div class="">
           <div>
             <div class="d-flex  mb-2">
-              <i class="fa-solid fa-circle-arrow-right pr-4"></i>
+              <i class="fa-solid fa-circle-arrow-right"></i>
               <p>Self check-in à partir de 13h00</p>
             </div>
             <div class="d-flex  mb-4">
-              <i class="fa-solid fa-circle-arrow-left pr-4"></i>
+              <i class="fa-solid fa-circle-arrow-left"></i>
               <p>Check-out jusqu’à 11h00</p>
             </div>
           </div>
@@ -126,19 +126,19 @@
             </div>
               <p>Assurez-vous des meilleurs prix en réservant ici !</p>
             <div class="d-flex justify-content-between">
-              <%# <%= image_tag 'coin', class:"icon-img" %>
+              <%# <%= cl_image_tag 'cUtopy/oin', class:"icon-img" %>
             </div>
           </div>
         </div>
         <% if @hostel.name == "Garden" %>
             <p>Afin de nous trouver facilement, veuillez privilégier l'utilisation de Google Maps plutôt que celle d'Apple Maps.</p>
           <div class="d-flex justify-content-between">
-            <%# <%= image_tag 'gps', class:"icon-img" %>
+            <%# <%= cl_image_tag 'gUtopy/ps', class:"icon-img" %>
           </div>
         <% end %>
             <p>Réservez vos cours de surf directement à la réception et bénéficiez de tarifs réduits avec notre partenaire Jo Moraiz Surf School.</p>
         <div class="d-flex justify-content-between mb-4">
-            <%# <%= image_tag 'surfboard', class:"icon-img jo-moraiz" %>
+            <%# <%= cl_image_tag 'sUtopy/urfboard', class:"icon-img jo-moraiz" %>
           </div>
       </div>
     </div>

@@ -31,6 +31,9 @@ gem "redis", ">= 4.0.1"
 
 # geocode/mapbox
 gem "geocoder"
+
+# Cloudinary
+gem "cloudinary"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

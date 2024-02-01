@@ -1,6 +1,6 @@
 <section id="video-container">
-  <%= video_tag 'teaser', loop:true, autoplay: true, muted:true %>
-  <%# # <%= image_tag 'video_screen' %>
+  <%= cl_video_tag 'Utopy/teaser', loop:true, autoplay: true, muted:true %>
+  <%# # <%= cl_image_tag/video_screen' %>
 </section>
 <div class="container">
   <section class="accueil">
@@ -19,14 +19,14 @@
 
 <section id="hostels" class="pt-4 container">
   <div class="coast col-sm-5">
-    <%= image_tag 'coast_full.png', class:'w-100 img-banner' %>
+    <%= cl_image_tag 'Utopy/coast_full', class:'w-100 img-banner' %>
     <div class="coast-background content container pb-4">
-      <%= image_tag 'coast_banner_1.jpg', class:'w-100 pb-2 banner-1' %>
+      <%= cl_image_tag 'Utopy/coast_banner_1', class:'w-100 pb-2 banner-1' %>
       <div class="d-flex justify-between">
-        <%= image_tag 'coast_bedroom_1.jpg', class:'w-50 pe-1' %>
+        <%= cl_image_tag 'Utopy/coast_bedroom_1', class:'w-50 pe-1' %>
         <div class="w-50 ps-1">
-          <%= image_tag 'coast_banner_2.jpg', class:'w-100 pb-1' %>
-          <%= image_tag 'coast_bathroom_1.jpg', class:'w-100 pt-1' %>
+          <%= cl_image_tag 'Utopy/coast_banner_2', class:'w-100 pb-1' %>
+          <%= cl_image_tag 'Utopy/coast_bathroom_1', class:'w-100 pt-1' %>
         </div>
       </div>
       <p class="my-4">Idéalement situé sur les hauteurs de la côte des basques, <strong>Coast</strong> vous accueille dans un décor terracotta. Laissez-vous porter par la magie du lieu, échangez avec les autres voyageurs autour d’un bon café, puis attrapez votre surf direction les vagues de la côte pour votre meilleure session! Plongez dans l’univers accueillant de <strong>Coast</strong>, où chaque détail a été soigneusement pensé pour créer une atmosphère chaleureuse et relaxante, vous assurant ainsi une expérience de séjour inoubliable.
@@ -37,14 +37,14 @@
     </div>
   </div>
     <div class="garden col-sm-5">
-    <%= image_tag 'garden_full.png', class:'w-100 img-banner' %>
+    <%= cl_image_tag 'Utopy/garden_full', class:'w-100 img-banner' %>
     <div class="garden-background content container">
-      <%= image_tag 'garden_banner_1.jpg', class:'w-100 pb-2 banner-1' %>
+      <%= cl_image_tag 'Utopy/garden_banner_1', class:'w-100 pb-2 banner-1' %>
       <div class="d-flex justify-between">
-        <%= image_tag 'garden_bedroom_1.jpg', class:'w-50 pe-1' %>
+        <%= cl_image_tag 'Utopy/garden_bedroom_1', class:'w-50 pe-1' %>
         <div class="w-50 ps-1">
-          <%= image_tag 'garden_banner_2.jpg', class:'w-100 pb-1' %>
-          <%= image_tag 'garden_bathroom_1.jpg', class:'w-100 pt-1' %>
+          <%= cl_image_tag 'Utopy/garden_banner_2', class:'w-100 pb-1' %>
+          <%= cl_image_tag 'Utopy/garden_bathroom_1', class:'w-100 pt-1' %>
         </div>
       </div>
       <p class="my-4">C’est dans un environnement plus calme que <strong>Garden</strong> vous ouvre ses portes. Vous entrez dans une ambiance « beach house » sous ses tons navy, découvrez un lieu confortable et agréable, puis laissez-vous charmer par la tranquillité de son jardin. La position centrale de l’hostel entre plages, centre-ville, gare et aéroport facilitera vos déplacements. <strong>Garden</strong> vous offre une expérience d'hébergement unique, idéale pour ceux qui recherchent une interaction sociale enrichissante et un budget maîtrisé.
@@ -98,7 +98,7 @@
     <div>
       <div class="d-flex align-items-center mb-4">
         <p class="col-7 mb-0"><strong>Pourquoi « Utopy » ?</strong></p>
-        <%= image_tag 'meeting_place', class:'col-5' %>
+        <%= cl_image_tag 'Utopy/meeting_place', class:'col-5' %>
       </div>
       <p>Utopy, c’est une petite stylisation de notre part du mot utopie qui veut dire « société idéale rêvée » et qui vient du grec eu-topo signifiant « bon lieu ». Notre logo, rappelle le symbole aborigène australien qui signifie « meeting place » traduit par « lieu de rencontre » en français. Un clin d’œil à ce pays où notre projet a pris vie.
       </p>

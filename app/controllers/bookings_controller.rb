@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :create ]
   def create
     start_date = Date.parse(params[:booking][:start_date].split(' to ')[0])
     end_date = Date.parse(params[:booking][:start_date].split(' to ')[1])

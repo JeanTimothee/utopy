@@ -1,0 +1,20 @@
+{
+ "name": "Utopy",
+ "description": "Venez profiter d'Utopy hostel, une auberge de jeunesse sur la côte basque, à Biarritz, avec des dortoirs tout équipés, cuisine et salle de bains.",
+ "background_color": "#FAFAFA",
+ "theme_color": "#E9EBF8",
+ "id": "/",
+ "display": "fullscreen",
+ "start_url": "/",
+ "icons": [
+  <% files = Dir.entries(Rails.root.join("app/assets/images/icons/")).select {|f| !File.directory? f} %>
+    <% files.each_with_index do |file, index| %>
+      <% match = file.match(/.+-(?<size>\d{2,3}x\d{2,3}).png/) %>
+      {
+        "src": "<%= image_path "icons/#{file}" %>",
+        "sizes": "<%= match && match[:size] %>",
+        "type": "image/png"
+      }<%= "," unless (files.size - 1) == index %>
+    <% end %>
+  ]
+}

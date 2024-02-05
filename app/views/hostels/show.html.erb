@@ -145,17 +145,24 @@
 
     <div id="booking-modal-desktop" data-booking-target='calendar' class="col-5">
       <div class="container">
-        <%= simple_form_for [@hostel, @booking] do |f| %>
-          <%= f.input :start_date,
-                as: :string,
-                label: false,
-                input_html: { class:'d-none', data: { controller: "datepicker" } } %>
-          <%= f.input :number_of_beds, as: :select, collection: (1..14), selected:1 %>
-          <div class="d-flex justify-content-between">
-            <p>Total price</p>
-            <h3><strong>123 €</strong></h3>
-          </div>
-          <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal" %>
+
+        <% if @booking.persisted? %>
+
+        <% else %>
+
+          <%= simple_form_for [@hostel, @booking] do |f| %>
+            <%= f.input :start_date,
+                  as: :string,
+                  label: false,
+                  input_html: { class:'d-none', data: { controller: "datepicker" } } %>
+            <%= f.input :number_of_beds, as: :select, collection: (1..14), selected:1 %>
+            <div class="d-flex justify-content-between">
+              <p>Total price</p>
+              <h3><strong>123 €</strong></h3>
+            </div>
+            <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal" %>
+          <% end %>
+
         <% end %>
       </div>
     </div>
@@ -168,17 +175,37 @@
 
   <div id="booking-modal-1" data-booking-target='calendar' class="d-none">
     <div class="container">
-      <%= simple_form_for [@hostel, @booking] do |f| %>
-        <%= f.input :start_date,
-              as: :string,
-              label: false,
-              input_html: { class:'d-none', data: { controller: "datepicker" } } %>
-        <%= f.input :number_of_beds, as: :select, collection: (1..14), selected:1 %>
-        <div class="d-flex justify-content-between">
-          <p>Total price</p>
-          <h3><strong>123 €</strong></h3>
-        </div>
-        <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal" %>
+
+      <% if @booking.persisted? %>
+        <%= simple_form_for [@booking, @contact] do |f| %>
+
+          <div class="d-flex justify-content-between">
+            <%= f.input :phone %>
+            <%= f.input :birthdate,
+                error: 'Renseignez votre date de naissance !',
+                as: :string,
+                input_html: { data: { controller: "birthdate" } } %>
+          </div>
+          <%= f.input :email %>
+          <%= f.input :name %>
+          <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "Germany", "Netherlands", "New Zealand", "Spain"]  %>
+          <%= f.button :submit, "Checkout", class:"book-btn-modal" %>
+        <% end %>
+      <% else %>
+        <%= simple_form_for [@hostel, @booking] do |f| %>
+          <%= f.input :start_date,
+                error: 'Renseignez vos dates !',
+                as: :string,
+                label: false,
+                input_html: { class:'d-none', data: { controller: "datepicker" } } %>
+          <%= f.input :number_of_beds, as: :select, collection: (1..14), selected:1 %>
+          <div class="d-flex justify-content-between">
+            <p>Total price</p>
+            <h3><strong>123 €</strong></h3>
+          </div>
+          <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal" %>
+        <% end %>
+
       <% end %>
     </div>
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_23_170020) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_02_145752) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,11 +34,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_23_170020) do
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
-    t.bigint "user_id", null: false
     t.integer "total_price_cents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.bigint "hostel_id", null: false
+    t.index ["hostel_id"], name: "index_bookings_on_hostel_id"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "email"
+    t.date "birthdate"
+    t.string "country"
+    t.bigint "booking_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_contacts_on_booking_id"
   end
 
   create_table "hostels", force: :cascade do |t|
@@ -49,6 +61,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_23_170020) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.date "opening"
+    t.date "closing"
   end
 
   create_table "pricings", force: :cascade do |t|
@@ -76,11 +90,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_23_170020) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "birthdate"
-    t.string "phone"
-    t.string "country"
-    t.string "first_name"
-    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -88,6 +97,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_23_170020) do
   add_foreign_key "beds", "hostels"
   add_foreign_key "beds_bookings", "beds"
   add_foreign_key "beds_bookings", "bookings"
-  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "hostels"
+  add_foreign_key "contacts", "bookings"
   add_foreign_key "pricings", "hostels"
 end

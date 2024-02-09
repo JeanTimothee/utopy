@@ -14,27 +14,27 @@
           <ul class="navbar-nav mt-2">
             <i class="fa-solid fa-xmark text-end mb-4" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></i>
             <li class="nav-item bottom-border py-2 text-end active">
-                <%= link_to "#", class: "nav-link" do %>
+                <%= link_to root_path, class: "nav-link" do %>
                   <h3>Home</h3>
                 <% end %>
             </li>
             <li class="nav-item bottom-border py-2 text-end">
-              <%= link_to "#", class: "nav-link" do %>
+              <%= link_to hostel_path(Hostel.find_by(name: "Coast")), class: "nav-link" do %>
                 <h3>Coast</h3>
               <% end %>
             </li>
             <li class="nav-item bottom-border py-2 text-end">
-              <%= link_to "#", class: "nav-link" do %>
+              <%= link_to hostel_path(Hostel.find_by(name: "Garden")), class: "nav-link" do %>
                 <h3>Garden</h3>
               <% end %>
             </li>
             <li class="nav-item bottom-border py-2 text-end">
-              <%= link_to "#", class: "nav-link" do %>
+              <%= link_to "#{root_path}#about-us", class: "nav-link" do %>
                 <h3>About us</h3>
               <% end %>
             </li>
             <li class="nav-item bottom-border py-2 text-end">
-              <%= link_to "#", class: "nav-link" do %>
+              <%= link_to "#{root_path}#contact", class: "nav-link" do %>
                 <h3>Contact</h3>
               <% end %>
             </li>
@@ -67,16 +67,16 @@
         <%= image_tag "logo_blanc.png" %>
       <% end %>
       <div class='menu d-flex align-items-center'>
-        <%= link_to "#", class: "nav-link" do %>
+        <%= link_to hostel_path(Hostel.find_by(name: "Coast")), class: "nav-link" do %>
           <h3>Coast</h3>
         <% end %>
-        <%= link_to "#", class: "nav-link" do %>
+        <%= link_to hostel_path(Hostel.find_by(name: "Garden")), class: "nav-link" do %>
           <h3>Garden</h3>
         <% end %>
-        <%= link_to "#", class: "nav-link" do %>
+        <%= link_to "#{root_path}#about-us", class: "nav-link" do %>
           <h3>About us</h3>
         <% end %>
-        <%= link_to "#", class: "nav-link" do %>
+        <%= link_to "#{root_path}#contact", class: "nav-link" do %>
           <h3>Contact</h3>
         <% end %>
       </div>

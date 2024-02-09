@@ -1,23 +1,44 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :create ]
+  skip_before_action :authenticate_user!, only: [ :create, :booked_dates ]
+  before_action :set_hostel
+
   def create
-    @hostel = Hostel.find(params[:hostel_id])
     @number_of_beds = params[:booking][:number_of_beds]
+    @booking = Booking.new()
     if params[:booking][:start_date].present?
       start_date = Date.parse(params[:booking][:start_date].split(' to ')[0])
       end_date = Date.parse(params[:booking][:start_date].split(' to ')[1])
-      @booking = Booking.new(start_date: start_date, end_date: end_date, number_of_beds: @number_of_beds)
+      @booking = Booking.new(start_date: start_date, end_date: end_date, number_of_beds: @number_of_beds.to_i)
       @booking.hostel = @hostel
       @booking.total_price_cents = @booking.calculate_price
     end
-    if @booking.save
+
+    if (@hostel.available_beds(@booking.start_date, @booking.end_date).count >= @booking.number_of_beds.to_i) && @booking.save!
+      @hostel.available_beds(@booking.start_date, @booking.end_date).sample(@booking.number_of_beds).each do |bed|
+        beds_booking = BedsBooking.new()
+        beds_booking.bed = bed
+        beds_booking.booking = @booking
+        beds_booking.save!
+      end
       redirect_to hostel_path(@hostel, booking: @booking.id)
     else
       render 'hostels/show', status: :unprocessable_entity
     end
   end
 
-  # def booking_params
-  #   params.require(:booking).permit(:start_date, :end_date)
-  # end
+  def booked_dates
+    number_of_beds = ( params[:number_of_beds] || 1 ).to_i
+    @booked_dates = @hostel.booked_dates(number_of_beds)
+
+    respond_to do |format|
+      format.json
+      # { render json: { booked_dates: @booked_dates } }
+    end
+  end
+
+  private
+
+  def set_hostel
+    @hostel = Hostel.find(params[:hostel_id])
+  end
 end

@@ -21,7 +21,7 @@
 }
 
 .amenities-card {
-  background: white;
+  background: $white;
   padding: 1rem;
   margin-bottom: 14px;
   .photo {
@@ -32,6 +32,14 @@
 
   .text {
     padding-top: 12px;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  li {
+    padding-bottom: 4px;
   }
 }
 
@@ -53,8 +61,8 @@
     display: none;
   }
   .banner-show img {
-    margin-top: 4rem;
-    height: 50vh;
+    height: 40vh;
+    width: 100vw;
     object-fit: cover;
   }
   #hostel {

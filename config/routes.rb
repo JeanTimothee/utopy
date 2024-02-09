@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  get 'hostels/show'
-  get 'bookings/create'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  get '/politique-de-confidentialite', to: 'pages#politique', as: 'politique'
+  get '/mentions-legales', to: 'pages#mentions', as: 'mentions'
+
   devise_for :users
   root to: "pages#home"
   resources :hostels, only: [:show] do
+    get 'booked_dates', on: :member, defaults: { format: :json }
+    get 'calculate', on: :member, defaults: { format: :json }
     resources :bookings, only: [:create]
   end
 

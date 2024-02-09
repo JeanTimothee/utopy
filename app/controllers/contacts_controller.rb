@@ -8,6 +8,7 @@ class ContactsController < ApplicationController
     if @contact.save
       redirect_to root_path
     else
+      @hostel = @booking.hostel
       render 'hostels/show', status: :unprocessable_entity
     end
   end

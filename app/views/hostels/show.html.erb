@@ -1,10 +1,10 @@
 <div id="hostel" class="<%= @hostel.name.downcase %>-background">
   <h1><%= @hostel.name.upcase %></h1>
-  <div class="banner-show container">
+  <div class="banner-show">
     <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_banner_1" %>
   </div>
   <div class="container cards">
-    <div class="col-sm-6">
+    <div class="col45">
       <div class="amenities-card">
         <div class="d-flex justify-content-between">
           <div class="col-5">
@@ -43,20 +43,33 @@
           <div class="col-6 d-flex flex-column justify-content-around">
             <h3>ESPACES COMMUNS</h3>
             <div class="icons d-flex flex-column justify-content-around">
-              <div class="d-flex justify-content-between align-items-center">
-                <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
-                <i class="fa-solid fa-kitchen-set col-3"></i>
-                <i class="fa-solid fa-couch col-3"></i>
-                <i class="fa-solid fa-shower col-3"></i>
-                <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
-              </div>
-              <div class="d-flex justify-content-around align-items-center">
-                <i class="fa-solid fa-fan col-3"></i>
-                <i class="fa-solid fa-wifi col-3"></i>
-                <% if @hostel.name == "Garden" %>
-                  <i class="fa-solid fa-umbrella-beach col-3"></i>
-                <% end %>
-              </div>
+
+              <% if @hostel.name == "Coast" %>
+                <div class="d-flex justify-content-around align-items-center">
+                  <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
+                  <i class="fa-solid fa-kitchen-set col-3"></i>
+                  <i class="fa-solid fa-couch col-3"></i>
+                  <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
+                </div>
+                <div class="d-flex justify-content-around align-items-center">
+                  <i class="fa-solid fa-shower col-3"></i>
+                  <i class="fa-solid fa-wifi col-3"></i>
+                </div>
+              <% else %>
+                <div class="d-flex justify-content-between align-items-center">
+                  <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
+                  <i class="fa-solid fa-kitchen-set col-3"></i>
+                  <i class="fa-solid fa-couch col-3"></i>
+                  <i class="fa-solid fa-shower col-3"></i>
+                  <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
+                </div>
+                <div class="d-flex justify-content-around align-items-center">
+                  <i class="fa-solid fa-wifi col-3"></i>
+                  <%= cl_image_tag 'Utopy/picnic', class:'col-3' %>
+                  <%# <i class="fa-solid fa-umbrella-beach col-3"></i> %>
+                </div>
+              <% end %>
+
             </div>
           </div>
           <div class="col-5">
@@ -108,113 +121,138 @@
       </div>
       <div class="amenities-card">
         <h3 class="mb-5">INFORMATIONS SUPPLEMENTAIRES</h3>
-        <div class="">
-          <div>
-            <div class="d-flex  mb-2">
-              <i class="fa-solid fa-circle-arrow-right"></i>
-              <p>Self check-in à partir de 13h00</p>
-            </div>
-            <div class="d-flex  mb-4">
-              <i class="fa-solid fa-circle-arrow-left"></i>
-              <p>Check-out jusqu’à 11h00</p>
-            </div>
+
+        <ul>
+          <li class=''>Self check-in à partir de 13h00</li>
+          <li class='pl-2'>Self check-out jusqu'à 11h00</li>
+          <%# <div class="d-flex align-items-center justify-content-between mb-2">
+            <i class="fa-solid fa-circle-arrow-right"></i>
           </div>
-          <div>
-              <p>Annulation gratuite : 5 jours avant votre date d’arrivée</p>
-            <div class="d-flex justify-content-between">
-              <%# <i class="fa-solid fa-circle-xmark"></i> %>
-            </div>
-              <p>Assurez-vous des meilleurs prix en réservant ici !</p>
-            <div class="d-flex justify-content-between">
-              <%# <%= cl_image_tag 'cUtopy/oin', class:"icon-img" %>
-            </div>
-          </div>
-        </div>
-        <% if @hostel.name == "Garden" %>
-            <p>Afin de nous trouver facilement, veuillez privilégier l'utilisation de Google Maps plutôt que celle d'Apple Maps.</p>
-          <div class="d-flex justify-content-between">
-            <%# <%= cl_image_tag 'gUtopy/ps', class:"icon-img" %>
-          </div>
-        <% end %>
-            <p>Réservez vos cours de surf directement à la réception et bénéficiez de tarifs réduits avec notre partenaire Jo Moraiz Surf School.</p>
-        <div class="d-flex justify-content-between mb-4">
-            <%# <%= cl_image_tag 'sUtopy/urfboard', class:"icon-img jo-moraiz" %>
-          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </div> %>
+
+          <li>Annulation gratuite : 5 jours avant votre date d’arrivée</li>
+          <li>Assurez-vous des meilleurs prix en réservant ici !</li>
+          <% if @hostel.name == "Garden" %>
+            <li>Afin de nous trouver facilement, veuillez privilégier l'utilisation de Google Maps plutôt que celle d'Apple Maps.</li>
+          <% end %>
+            <li>Réservez vos cours de surf directement à la réception et bénéficiez de tarifs réduits avec notre partenaire Jo Moraiz Surf School.</li>
+        </ul>
       </div>
     </div>
 
-    <div id="booking-modal-desktop" data-booking-target='calendar' class="col-5">
+    <%# Booking modal for desktop here %>
+
+    <% unless request.user_agent =~ /Mobile/ %>
+      <div class="col45 booking-desktop-wrapper">
+        <div id="booking-desktop" class="container">
+          <% if @booking.persisted? %>
+            <%= simple_form_for [@booking, @contact] do |f| %>
+
+              <div class="d-flex justify-content-between">
+                <%= f.input :phone %>
+                <%= f.input :birthdate,
+                    error: 'Renseignez votre date de naissance !',
+                    as: :string,
+                    input_html: { data: { controller: "birthdate" } } %>
+              </div>
+              <div class="d-flex justify-content-between">
+                <%= f.input :email %>
+                <%= f.input :name %>
+              </div>
+              <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "Germany", "Netherlands", "New Zealand", "Spain"]  %>
+              <%= f.button :submit, "Checkout", class:"book-btn-modal #{@hostel.name.downcase}-background" %>
+            <% end %>
+          <% else %>
+            <%= simple_form_for [@hostel, @booking], data: { controller: "datepicker", datepicker_booked_value: @booked_dates.to_json, datepicker_hostel_value: @hostel.id } do |f| %>
+              <div class="d-flex">
+                <%= f.input :start_date,
+                  error: 'Renseignez vos dates !',
+                  as: :string,
+                  label: false,
+                  input_html: {
+                    class: 'd-none',
+                    data: {
+                      datepicker_target: "startDate",
+                      action: "change->datepicker#calculate",
+                      hostel_id: @hostel.id
+                    }
+                  }
+                %>
+                <div class="d-flex flex-column justify-content-around inputs-right">
+                  <%= f.input :number_of_beds, as: :select, collection: (1..8), selected: 1, wrapper_html: { class: "text-center d-flex flex-column justify-content-between" }, input_html: { data: { datepicker_target: "numberOfBeds", action: "change->datepicker#updateDatepicker" }} %>
+                  <div class="text-center d-flex flex-column justify-content-between price-tag">
+                    <p>Total price</p>
+                    <h3 data-datepicker-target="price"><strong>0 €</strong></h3>
+                  </div>
+                </div>
+              </div>
+              <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal #{@hostel.name.downcase}-background" %>
+            <% end %>
+
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+<% if request.user_agent =~ /Mobile/ %>
+
+  <div id="footer" data-controller="booking">
+    <div id="booking-modal-1" data-booking-target='calendar' class="<%= 'd-none' unless @booking.persisted? %>">
       <div class="container">
 
         <% if @booking.persisted? %>
+          <%= simple_form_for [@booking, @contact] do |f| %>
 
-        <% else %>
-
-          <%= simple_form_for [@hostel, @booking] do |f| %>
-            <%= f.input :start_date,
+            <div class="d-flex justify-content-between">
+              <%= f.input :phone %>
+              <%= f.input :birthdate,
+                  error: 'Renseignez votre date de naissance !',
                   as: :string,
-                  label: false,
-                  input_html: { class:'d-none', data: { controller: "datepicker" } } %>
-            <%= f.input :number_of_beds, as: :select, collection: (1..14), selected:1 %>
+                  input_html: { data: { controller: "birthdate" } } %>
+            </div>
+            <%= f.input :email %>
+            <%= f.input :name %>
+            <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "Germany", "Netherlands", "New Zealand", "Spain"]  %>
+            <%= f.button :submit, "Checkout", class:"book-btn-modal #{@hostel.name.downcase}-background" %>
+          <% end %>
+        <% else %>
+          <%= simple_form_for [@hostel, @booking], data: { controller: "datepicker", datepicker_booked_value: @booked_dates.to_json, datepicker_hostel_value: @hostel.id } do |f| %>
+            <%= f.input :start_date,
+              error: 'Renseignez vos dates !',
+              as: :string,
+              label: false,
+              input_html: {
+                class: 'd-none',
+                data: {
+                  datepicker_target: "startDate",
+                  action: "change->datepicker#calculate",
+                  hostel_id: @hostel.id
+                }
+              }
+            %>
+
+            <%= f.input :number_of_beds, as: :select, collection: (1..8), selected: 1, input_html: { data: { datepicker_target: "numberOfBeds", action: "change->datepicker#updateDatepicker" }} %>
             <div class="d-flex justify-content-between">
               <p>Total price</p>
-              <h3><strong>123 €</strong></h3>
+              <h3 data-datepicker-target="price"><strong>0 €</strong></h3>
             </div>
-            <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal" %>
+            <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal #{@hostel.name.downcase}-background" %>
           <% end %>
 
         <% end %>
       </div>
     </div>
-
-  </div>
-</div>
-
-
-<div id="footer" data-controller="booking">
-
-  <div id="booking-modal-1" data-booking-target='calendar' class="d-none">
-    <div class="container">
-
-      <% if @booking.persisted? %>
-        <%= simple_form_for [@booking, @contact] do |f| %>
-
-          <div class="d-flex justify-content-between">
-            <%= f.input :phone %>
-            <%= f.input :birthdate,
-                error: 'Renseignez votre date de naissance !',
-                as: :string,
-                input_html: { data: { controller: "birthdate" } } %>
-          </div>
-          <%= f.input :email %>
-          <%= f.input :name %>
-          <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "Germany", "Netherlands", "New Zealand", "Spain"]  %>
-          <%= f.button :submit, "Checkout", class:"book-btn-modal" %>
-        <% end %>
-      <% else %>
-        <%= simple_form_for [@hostel, @booking] do |f| %>
-          <%= f.input :start_date,
-                error: 'Renseignez vos dates !',
-                as: :string,
-                label: false,
-                input_html: { class:'d-none', data: { controller: "datepicker" } } %>
-          <%= f.input :number_of_beds, as: :select, collection: (1..14), selected:1 %>
-          <div class="d-flex justify-content-between">
-            <p>Total price</p>
-            <h3><strong>123 €</strong></h3>
-          </div>
-          <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal" %>
-        <% end %>
-
-      <% end %>
+    <div class="<%= 'd-none' if @booking.persisted? %> booking-footer container d-flex justify-content-between align-items-center" data-booking-target="trigger">
+      <h3><%= @hostel.name.upcase %></h3>
+      <div class="book-btn-show" data-action="click->booking#showBookingModal">
+        <h3 class="<%= @hostel.name.downcase %>-background">Book</h3>
+      </div>
     </div>
-  </div>
 
-  <div class="booking-footer container d-flex justify-content-between align-items-center" data-booking-target="trigger">
-    <h3><%= @hostel.name.upcase %></h3>
-    <div class="book-btn-show" data-action="click->booking#showBookingModal">
-      <h3>Book</h3>
-    </div>
   </div>
-
-</div>
+<% end %>

@@ -4,9 +4,18 @@ class Booking < ApplicationRecord
   has_many :beds_bookings, dependent: :destroy
   has_many :beds, through: :beds_bookings
 
-  attr_accessor :number_of_beds
+  validate :no_overlapping_bookings
+  validate :end_date_after_start_date
 
   validates :start_date, :end_date, presence: true
+
+  def all_beds
+    beds_bookings.map(&:bed)
+  end
+
+  def all_beds_bookings
+    beds_bookings
+  end
 
   def calculate_price
     # Determine booking's pricing_table
@@ -16,7 +25,7 @@ class Booking < ApplicationRecord
     # sum each night depending on the price range in the pricing_table
     sum = self.sum_nights(dates, pricing)
     # apply reductions & taxes
-    if dates.size.between?(2,6)
+    if dates.uniq.size.between?(2,6)
       sum = (sum * (1 - pricing.reduction_2_6.to_f / 100)).to_i
     elsif dates.size >= 7
       sum = (sum * (1 - pricing.reduction_7_plus.to_f / 100)).to_i
@@ -25,7 +34,7 @@ class Booking < ApplicationRecord
   end
 
   def dates_array
-    (self.start_date..(self.end_date - 1)).to_a
+    (self.start_date..(self.end_date - 1)).to_a * number_of_beds
   end
 
   def sum_nights(dates, pricing)
@@ -46,4 +55,25 @@ class Booking < ApplicationRecord
       end
     end
   end
+
+
+  private
+
+  def no_overlapping_bookings
+    all_beds.each do |bed|
+      overlapping_bookings = bed.bookings.where("start_date < ? AND end_date > ? OR start_date >= ? AND end_date <= ?", end_date, start_date, start_date, end_date)
+
+      if overlapping_bookings.exists?
+        errors.add(:base, "Bed #{bed.number} is already booked for the selected dates")
+      end
+    end
+  end
+
+  def end_date_after_start_date
+    return if end_date.blank? || start_date.blank?
+
+    if end_date < start_date
+      errors.add(:end_date, "must be after the start date")
+    end
+ end
 end

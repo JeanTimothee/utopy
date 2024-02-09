@@ -7,12 +7,23 @@
   font-family: 'KoHo';
   font-size: 24px;
   color: $white;
-  background-color: $orange;
   width: 100%;
   &:hover {
     color: $white;
+  }
+}
+
+.book-btn-modal.coast-background {
+  &:hover {
     background-color: $orange;
     border-color: $orange;
+  }
+}
+
+.book-btn-modal.garden-background {
+  &:hover {
+    background-color: $blue;
+    border-color: $blue;
   }
 }
 
@@ -62,5 +73,54 @@
   .cards {
     display: flex;
     justify-content: space-between;
+    position: relative;
+  }
+}
+
+.garden-background {
+  .flatpickr-day.selected {
+    background: $blue!important;
+    border-color: $blue!important;
+  }
+  span.flatpickr-day.endRange {
+    background: $blue!important;
+    border-color: $blue!important;
+    &:hover {
+      background: $blue!important;
+      border-color: $blue!important;
+    }
+  }
+
+  span.flatpickr-day.startRange {
+    background: $blue!important;
+    border-color: $blue!important;
+    &:hover {
+      background: $blue!important;
+      border-color: $blue!important;
+    }
+  }
+}
+
+.coast-background {
+  .flatpickr-day.selected {
+    background: $orange!important;
+    border-color: $orange!important;
+  }
+  span.flatpickr-day.endRange {
+    background: $orange!important;
+    border-color: $orange!important;
+    &:hover {
+      background: $orange!important;
+      border-color: $orange!important;
+    }
+  }
+
+  span.flatpickr-day.startRange {
+    background: $orange!important;
+    border-color: $orange!important;
+    &:hover {
+      background: $orange!important;
+      border-color: $orange!important;
+    }
   }
 }

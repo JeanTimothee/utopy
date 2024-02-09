@@ -35,6 +35,9 @@ gem "geocoder"
 # Cloudinary
 gem "cloudinary"
 
+# Admin
+gem "rails_admin", "3.0"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -81,3 +84,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+gem "sassc-rails"

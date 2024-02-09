@@ -13,4 +13,10 @@ class PagesController < ApplicationController
       }
     end
   end
+
+  def politique
+  end
+
+  def mentions
+  end
 end

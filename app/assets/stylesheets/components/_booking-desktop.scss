@@ -1,0 +1,48 @@
+
+@media screen and (min-width: 568px) {
+  .banner-show {
+    position: sticky;
+    top: 0;
+  }
+
+  .booking-desktop-wrapper {
+  }
+
+  #booking-desktop {
+    height: 56vh;
+    background-color: $white;
+    position: sticky;
+    top: 42vh;
+  }
+
+  .col45 {
+    flex: 0 0 auto;
+    width: 49%;
+  }
+
+  .inputs-right {
+    margin: 0 auto;
+  }
+
+  .booking_number_of_beds select {
+    width: 100%!important;
+  }
+
+  .price-tag {
+    border: 1px solid $gray;
+    border-radius: 4px;
+    padding: 1rem
+  }
+
+  .simple_form.new_booking {
+    height: 100%;
+  }
+
+  .book-btn-modal {
+    margin-bottom: 8px;
+  }
+
+  .booking_start_date {
+    max-width: 25vw;
+  }
+}

@@ -6,9 +6,9 @@ Booking.destroy_all
 puts '-------------------------'
 puts 'Creating users...'
 
-tim = User.create!(email: 'tim@gmail.com', password:'123456')
-gladys = User.create!(email: 'gladys@gmail.com', password:'123456')
-pauline = User.create!(email: 'pauline@gmail.com', password:'123456')
+tim = User.create!(email: 'tim@gmail.com', password:'123456', admin: true)
+gladys = User.create!(email: 'gladys@gmail.com', password:'123456', admin: true)
+pauline = User.create!(email: 'pauline@gmail.com', password:'123456', admin: true)
 
 puts "#{User.count} users created!"
 
@@ -80,6 +80,7 @@ contacts.each_with_index do |contact, i|
   booking = Booking.new(start_date: Date.new(2024,8,(3 + i)), end_date: Date.new(2024,8,(7 + i)))
   booking.hostel_id = Hostel.first.id
   booking.total_price_cents = booking.dates_array.size * 4000
+  booking.number_of_beds = 1
   booking.save!
   contact.booking = booking
   contact.save!

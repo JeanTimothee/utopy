@@ -1,0 +1,23 @@
+    <div id="booking-modal-desktop" data-booking-target='calendar' class="col-5">
+      <div class="container">
+
+        <% if @booking.persisted? %>
+
+        <% else %>
+
+          <%= simple_form_for [@hostel, @booking] do |f| %>
+            <%= f.input :start_date,
+                  as: :string,
+                  label: false,
+                  input_html: { class:'d-none', data: { controller: "datepicker" } } %>
+            <%= f.input :number_of_beds, as: :select, collection: (1..14), selected:1 %>
+            <div class="d-flex justify-content-between">
+              <p>Total price</p>
+              <h3><strong>123 €</strong></h3>
+            </div>
+            <%= f.button :submit, "Book #{@hostel.name.upcase}", class:"book-btn-modal" %>
+          <% end %>
+
+        <% end %>
+      </div>
+    </div>

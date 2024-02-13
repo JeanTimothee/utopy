@@ -10,3 +10,22 @@
 .img-about {
   object-fit: cover;
 }
+
+
+@media screen and (min-width: 568px) {
+  .hostel-mosaic {
+    height: 36vh;
+  }
+
+  .hostel-mosaic-right {
+    height: 100%;
+    img {
+      height: 50%;
+    }
+  }
+
+  .text-hostel {
+    min-height: 28px;
+    max-height: 36vh;
+  }
+}

@@ -43,7 +43,7 @@ pricing_coast = Pricing.new(
   june_september: 5200,
   summer: 5500,
   special_weekends: 6300,
-  sejour_tax: 88,
+  sejour_tax: 115,
   tva: 10,
   reduction_2_6: 5,
   reduction_7_plus: 10
@@ -59,7 +59,7 @@ pricing_garden = Pricing.new(
   june_september: 4200,
   summer: 4500,
   special_weekends: 5300,
-  sejour_tax: 88,
+  sejour_tax: 115,
   tva: 10,
   reduction_2_6: 5,
   reduction_7_plus: 10
@@ -79,7 +79,7 @@ contacts = [contact_1, contact_2, contact_3]
 contacts.each_with_index do |contact, i|
   booking = Booking.new(start_date: Date.new(2024,8,(3 + i)), end_date: Date.new(2024,8,(7 + i)))
   booking.hostel_id = Hostel.first.id
-  booking.total_price_cents = booking.dates_array.size * 4000
+  booking.total_price_cents = 4000 * (booking.end_date - booking.end_date).to_i
   booking.number_of_beds = 1
   booking.save!
   contact.booking = booking

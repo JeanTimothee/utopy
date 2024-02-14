@@ -30,7 +30,7 @@ class Booking < ApplicationRecord
     elsif dates.size >= 7
       sum = (sum * (1 - pricing.reduction_7_plus.to_f / 100)).to_i
     end
-    return sum + (dates.size * pricing.sejour_tax)
+    return sum # + (dates.size * pricing.sejour_tax)
   end
 
   def dates_array

@@ -11,7 +11,7 @@
             <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_bedroom_1", class:"photo" %>
           </div>
           <div class="col-6 d-flex flex-column justify-content-around">
-            <h3>DORTOIRS</h3>
+            <h3><%= t('show.title_1') %></h3>
             <div class="icons d-flex flex-column justify-content-around">
               <div class="d-flex justify-content-between align-items-center">
                 <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
@@ -33,15 +33,15 @@
           </div>
         </div>
         <% if @hostel.name == "Garden" %>
-          <p class="text">Bienvenue dans notre spacieux dortoir mixte, où l'esprit de communauté rencontre le confort moderne! Pouvant accueillir jusqu'à 15 voyageurs, Garden vous offre une expérience en lits box pour un confort garanti, ainsi qu’un espace personnel soigneusement équipé de rangement, lampe, prise, ventilateur et rideaux individuels. Le dortoir bénéficie d’une climatisation, le linge de lit est inclus et des casiers sont à votre disposition (cadenas non compris).</p>
+          <p class="text"><%= t('show.garden.text_1') %></p>
         <% else %>
-          <p class="text">Découvrez notre dortoir mixte de 15 personnes offrant une expérience de voyage sociale, confortable et économique. Nos lits box créent un cocon personnel spacieux équipé de rangement, lampe, prise, ventilateur et rideaux individuels. Un mélange parfait d'intimité et de convivialité pour un repos réparateur. Le linge de lit est inclus et des casiers sont à votre disposition (cadenas non compris).</p>
+          <p class="text"><%= t('show.coast.text_1') %></p>
         <% end %>
       </div>
       <div class="amenities-card">
         <div class="d-flex justify-content-between">
           <div class="col-6 d-flex flex-column justify-content-around">
-            <h3>ESPACES COMMUNS</h3>
+            <h3><%= t('show.title_2') %></h3>
             <div class="icons d-flex flex-column justify-content-around">
 
               <% if @hostel.name == "Coast" %>
@@ -77,9 +77,9 @@
           </div>
         </div>
         <% if @hostel.name == "Garden" %>
-          <p class="text">Partagez les histoires de vos aventures quotidiennes dans nos espaces communs, où les conversations  animées se mêlent au rire joyeux de nouveaux amis. Cuisine, salon, salle de bain, tout est aménagé et pensé pour votre confort quotidien. Le jardin est accessible pendant la journée pour profiter du calme et lézarder au soleil. Un surf rack est également à disposition pour votre matériel personnel ou loué. La wifi gratuite est disponible dans tout l’hostel.</p>
+          <p class="text"><%= t('show.garden.text_2') %></p>
         <% else %>
-          <p class="text">Découvrez nos espaces communs accueillants où les idées et les histoires circulent librement, et plongez-vous dans l'atmosphère vibrante de notre communauté internationale. Cuisine, salon, salle de bain, tout est aménagé et pensé pour votre confort quotidien. Un surf rack est également à disposition pour votre matériel personnel ou loué. La wifi gratuite est disponible dans tout l’hostel.</p>
+          <p class="text"><%= t('show.coast.text_2') %></p>
         <% end %>
       </div>
       <div class="amenities-card">
@@ -88,7 +88,7 @@
             <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_kitchen", class:"photo" %>
           </div>
           <div class="col-6 d-flex flex-column justify-content-around">
-            <h3>PROXIMITE</h3>
+            <h3><%= t('show.title_3') %></h3>
             <div class="icons d-flex flex-column justify-content-around">
               <div class="d-flex justify-content-between align-items-center">
                 <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
@@ -114,17 +114,17 @@
           </div>
         </div>
         <% if @hostel.name == "Garden" %>
-          <p class="text">Situé à l’écart du centre-ville de Biarritz, vous pourrez profiter de la tranquillité des environs, faire votre yoga au lac Marion, télétravailler au Tropical Coworking ou goûter aux délices du Café de la baleine. Supérette, boulangerie, restaurants, le quartier de Saint-Martin satisfera toutes vos envies. Bien que tout soit accessible à pied, la navette gratuite N11 vous permettra de rejoindre rapidement le centre-ville et les plages. Garden dispose d’un parking gratuit et d’un rack à vélo (nous nous déchargeons de toutes responsabilités). La gare et l’aéroport sont accessibles à pied ou en bus.</p>
+          <p class="text"><%= t('show.garden.text_3') %></p>
         <% else %>
-          <p class="text">A quelques pas de l’hostel, la côte des basques vous offre un panorama sur l’océan où vous pourrez admirer les plus beaux couchers de soleil de Biarritz. Boulangerie, supérette, bars et restaurants, le quartier de Bibi Beaurivage saura combler toutes vos envies. Tout est accessible à pied, toutefois la navette gratuite N10 vous permet de rejoindre le centre et autres plages de la ville plus rapidement. Coast ne dispose pas de parking ni de rack à vélo, nous vous invitons à les garer dans la rue (nous ne garantissons pas la disponibilité).</p>
+          <p class="text"><%= t('show.coast.text_3') %></p>
         <% end %>
       </div>
       <div class="amenities-card">
-        <h3 class="mb-5">INFORMATIONS SUPPLEMENTAIRES</h3>
+        <h3 class="mb-5"><%= t('show.title_4') %></h3>
 
         <ul>
-          <li class=''>Self check-in à partir de 13h00</li>
-          <li class='pl-2'>Self check-out jusqu'à 11h00</li>
+          <li class=''><%= t('show.text_4_1') %></li>
+          <li class='pl-2'><%= t('show.text_4_2') %></li>
           <%# <div class="d-flex align-items-center justify-content-between mb-2">
             <i class="fa-solid fa-circle-arrow-right"></i>
           </div>
@@ -132,12 +132,12 @@
             <i class="fa-solid fa-circle-arrow-left"></i>
           </div> %>
 
-          <li>Annulation gratuite : 5 jours avant votre date d’arrivée</li>
-          <li>Assurez-vous des meilleurs prix en réservant ici !</li>
+          <li><%= t('show.text_4_3') %></li>
+          <li><%= t('show.text_4_4') %></li>
           <% if @hostel.name == "Garden" %>
-            <li>Afin de nous trouver facilement, veuillez privilégier l'utilisation de Google Maps plutôt que celle d'Apple Maps.</li>
+            <li><%= t('show.garden.text_4_5') %></li>
           <% end %>
-            <li>Réservez vos cours de surf directement à la réception et bénéficiez de tarifs réduits avec notre partenaire Jo Moraiz Surf School.</li>
+            <li><%= t('show.text_4_5') %></li>
         </ul>
       </div>
     </div>
@@ -183,7 +183,7 @@
                 <div class="d-flex flex-column justify-content-around inputs-right">
                   <%= f.input :number_of_beds, as: :select, collection: (1..8), selected: 1, wrapper_html: { class: "text-center d-flex flex-column justify-content-between" }, input_html: { data: { datepicker_target: "numberOfBeds", action: "change->datepicker#updateDatepicker" }} %>
                   <div class="text-center d-flex flex-column justify-content-between price-tag">
-                    <p>Total price</p>
+                    <p>Total price TTC</p>
                     <h3 data-datepicker-target="price"><strong>0 €</strong></h3>
                   </div>
                 </div>

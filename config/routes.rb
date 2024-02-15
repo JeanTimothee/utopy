@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users
 
-  scope '(:locale)', locale: /fr|en/ do
+  scope '(:locale)', locale: /en/ do
 
     get '/politique-de-confidentialite', to: 'pages#politique', as: 'politique'
     get '/mentions-legales', to: 'pages#mentions', as: 'mentions'
 
-    devise_for :users
     root to: "pages#home"
     resources :hostels, only: [:show] do
       get 'booked_dates', on: :member, defaults: { format: :json }

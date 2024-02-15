@@ -1,32 +1,3 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 fr:
   hello: "Hello world"
   home:
@@ -63,3 +34,108 @@ fr:
       text_2: "Partagez les histoires de vos aventures quotidiennes dans nos espaces communs, où les conversations  animées se mêlent au rire joyeux de nouveaux amis. Cuisine, salon, salle de bain, tout est aménagé et pensé pour votre confort quotidien. Le jardin est accessible pendant la journée pour profiter du calme et lézarder au soleil. Un surf rack est également à disposition pour votre matériel personnel ou loué. La wifi gratuite est disponible dans tout l'hostel."
       text_3: "Situé à l'écart du centre-ville de Biarritz, vous pourrez profiter de la tranquillité des environs, faire votre yoga au lac Marion, télétravailler au Tropical Coworking ou goûter aux délices du Café de la baleine. Supérette, boulangerie, restaurants, le quartier de Saint-Martin satisfera toutes vos envies. Bien que tout soit accessible à pied, la navette gratuite N11 vous permettra de rejoindre rapidement le centre-ville et les plages. Garden dispose d'un parking gratuit et d'un rack à vélo (nous nous déchargeons de toutes responsabilités). La gare et l'aéroport sont accessibles à pied ou en bus."
       text_4_5: "Afin de nous trouver facilement, veuillez privilégier l'utilisation de Google Maps plutôt que celle d'Apple Maps."
+  reservation_policy:
+    title: POLITIQUE DE RESERVATION
+    small_title: "Politique de réservation"
+    introduction: "Toute demande de réservation entraîne l'adhésion aux présentes conditions de vente et l'acceptation complète et sans réserve de leurs dispositions."
+    prices:
+      title: Prix
+      points:
+        - "Au prix mentionné dans la réservation seront ajoutées lors de la facturation, les prestations complémentaires fournies par Utopy hostel lors du séjour."
+        - "Les prix sont indiqués en Euros. La TVA et la taxe de séjour est toujours comprise. Les prix indiqués ne comprennent que les prestations strictement mentionnées dans la réservation."
+    reservation_conditions:
+      title: Conditions de réservation
+      points:
+        - "Les réservations se font :"
+        - "par téléphone au +33749198463"
+        - "sur le site internet utopyhostel.com"
+        - "via les plateformes de réservation en ligne (booking, airbnb)"
+        - "Le montant total sera demandé afin de garantir la réservation uniquement par carte bancaire."
+        - "Le client doit être le propriétaire de la carte de crédit utilisée pour effectuer la réservation."
+        - "La réservation n'est ferme et définitive qu'après réception d'un mail de confirmation adressée au client."
+        - "Pour toute privatisation ou réservation de groupe, nous contacter au 0749198463"
+    cancellation_conditions:
+      title: Conditions d'annulation ou de modification
+      points:
+        - "Le délai d'annulation sans frais est de : 5 jours avant la date d'arrivée. En dehors de ce délai,  le montant total du séjour sera conservé par l'hostel."
+        - "En cas de non-présentation et en l'absence d'annulation, le montant total de la réservation sera prélevé. Le personnel sera également libre de louer le lit à d'autres locataires."
+        - "En cas de séjour écourté, l'intégralité du séjour sera due (hors cas de force majeure)."
+        - "Les retards à l'arrivée ou les départs anticipés ne peuvent en aucun cas donner lieu à un remboursement. Les problèmes de transport (vols, trains, Uber, etc.) restent à la charge du locataire et ne constituent pas un motif suffisant pour obtenir un remboursement de la réservation."
+        - "Pour annuler une réservation, le client est invité à prendre contact directement avec Utopy Hostel au +33 (0)749198463 ou en envoyant un email à utopy.hostel@gmail.com"
+        - "L'annulation de la réservation est effective à réception d'un e-mail confirmant celle-ci. La date de réception de la demande d'annulation (par email ou téléphone) sera la date retenue pour l'annulation."
+    private_reservation_conditions:
+      title: Conditions d'annulation ou de modification pour les privatisations
+      points:
+        - "Le délai d'annulation sans frais est de 15 jours avant la date d'arrivée En dehors de ces délais, le montant total du séjour sera conservé par l'hostel."
+    usage:
+      title: Utilisation
+      arrival_time: "Heure d'arrivée 13h00"
+      departure_time: "Heure de départ 11h00"
+      points:
+        - "Le personnel veillera à ce que la propriété soit rendue disponible dans un état correspondant à sa description."
+        - "Le locataire a le droit d'occuper la maison de manière pacifique et ordonnée. Au moment du départ, le locataire s'engage à laisser la propriété dans le même état de propreté qu'il l'a trouvé à l'arrivée. Tous les agencements, installations et le mobilier de l'inventaire doivent être laissés au même endroit où le locataire les a trouvés à l'arrivée. Toute réparation des installations résultant d'une négligence de la part du locataire sera à la charge de celui-ci."
+        - "En aucun cas le locataire ne peut sous-louer le bien, même gratuitement. Cela rendrait le contrat de location nul et non avenu."
+        - "Le locataire ne peut en aucun cas rester dans la propriété ou camper autour de la propriété après l'expiration de la période de location, sans l'autorisation du personnel. Aucune modification ne peut être apportée à ce contrat sans l'accord des deux partis."
+        - "L'arrivée se fait de manière autonome via mail, le locataire peut se rendre dans la chambre, et son accueil est assuré."
+        - "L'heure de départ est, au plus tard, à 11h du matin le jour du départ."
+        - "Le nombre de locataires ne peut excéder le nombre indiqué sur le formulaire de réservation."
+        - "Tout extra devra être réglé à la réception avant utilisation du service."
+        - "L'établissement Utopy hostel n'est pas adapté aux familles avec enfants et n'est pas accessible aux mineurs."
+        - "Le personnel se réserve le droit d'annuler le contrat de location à tout moment en cas de comportement irrespectueux contre les règles de l'hostel, le personnel ou d'autres locataires."
+        - "Pour votre sécurité, les hostels sont sous vidéo de surveillance."
+        - "La présence d'animaux dans la maison n'est pas autorisée. Tout locataire qui ne respecte pas cette règle annule son contrat de location."
+    insurance:
+      title: Assurance
+      description: "Utopy hostel n'assume aucune responsabilité pour le vol, la perte ou l'endommagement d'objets personnels des locataires."
+    force_majeure:
+      title: Force majeure
+      description: "Utopy hostel ne pourra être tenu responsable à l'égard de ses clients en cas d'inexécution de ses obligations pour événement de force majeure. Sont considérés comme cas de force majeure ou cas fortuit ceux habituellement reconnus par la jurisprudence des Cours et Tribunaux Français."
+    data_privacy:
+      title: Informatique et Libertés
+      points:
+        - "En application de la loi L.78-17 du 6 janvier 1978, le client est informé que les informations à caractère nominatif communiquées à Utopy hostel font l'objet d'un traitement informatisé, sauf opposition expresse de sa part."
+        - "Le client dispose à tout moment d'un droit d'accès, de rectification ou de suppression auprès d'Utopy hostel."
+        - "Les informations qui vous sont demandées lors de la réservation sont indispensables pour le bon traitement de votre demande. Ces informations ont pour seul destinataire Utopy hostel. Utopy hostel s'engage à ne communiquer à aucun tiers les informations que vous lui aurez confiées."
+    applicable_law:
+      title: Droit applicable
+      description: "Tout différend, toute réclamation ou tout litige relatif aux modalités de réservation d'un séjour sont soumis au droit français. Seul le Tribunal d'Instance de Bayonne sera compétent."
+  legal_mentions:
+    title: Mentions Légales
+    utopy_hostel:
+      company_name: "SARL UTOPY HOSTEL"
+      address: "27 ave de Migron Bat E 64200 BIARRITZ"
+      phone: "0749198463"
+      email: "utopy.hostel@gmail.com"
+      capital: "Capital social: 1000€"
+    hosting_provider:
+      title: Site Hébergeur
+      details: "Heroku Inc. - 650 7th Street San Francisco, CA USA Et Vercel Inc. 340 S Lemon Ave #4133 - Walnut CA 91789 USA Webmaster: Timothée Régis"
+    activity:
+      title: Activité
+      registration: "Immatriculation: 902170067 RCS BAYONNE"
+      tax_id: "Numéro individuel d'identification fiscale: 3024613808209"
+      terms_of_sale: "Conditions générales de vente (CGV)"
+    cookie_usage:
+      title: L'utilisation de cookies
+      details: "Un cookie est un outil informatique qui permet de tracer et d'analyser le comportement d'un usager sur internet (sa navigation sur internet, sur un site, dans une application, etc.). Les cookies soumis au consentement des internautes sont ceux ayant pour but de personnaliser les publicités et ceux liés aux réseaux sociaux. Vous pouvez bloquer les cookies en modifiant les paramètres de votre navigateur. Si vous ne souhaitez plus que nous traitions vos données, veuillez nous contacter à utopy.hostel@gmail.com. Si vous les acceptez, votre consentement est enregistré pendant 13 mois maximum."
+    privacy_policy:
+      title: Politique de confidentialité
+      details: "Nous recevons, collectons et stockons toute information que vous saisissez sur notre site web ou que vous nous fournissez de toute autre manière. En outre, nous recueillons l'adresse de protocole Internet (IP) utilisée pour connecter votre ordinateur à l'Internet ; le login ; l'adresse e-mail ; le mot de passe ; les informations sur l'ordinateur et la connexion et l'historique des achats. Nous pouvons utiliser des outils logiciels pour mesurer et collecter des informations de session, y compris les temps de réponse des pages, la durée des visites sur certaines pages, les informations sur l'interaction entre les pages et les méthodes utilisées pour naviguer hors de la page. Nous recueillons également des informations d'identification personnelle (y compris le nom, l'adresse électronique, les communications) ; les détails de paiement (y compris les informations de carte de crédit), les commentaires, les réactions, les évaluations de produits, les recommandations et le profil personnel. Lorsque vous effectuez une transaction sur notre site web, dans le cadre du processus, nous recueillons les informations personnelles que vous nous donnez, telles que votre nom, votre adresse et votre adresse e-mail. Vos informations personnelles ne seront utilisées que pour les raisons spécifiques mentionnées ci-dessus. Nous recueillons ces informations non personnelles et personnelles aux fins suivantes :"
+    privacy_policy_usage:
+      - "Fournir et exploiter les services ;"
+      - "Fournir à nos utilisateurs une Assistance et un support technique permanents ;"
+      - "Pouvoir contacter nos visiteurs et utilisateurs avec des avis généraux ou personnalisés relatifs au service et des messages promotionnels ;"
+      - "Pour créer des données statistiques agrégées et d'autres informations non personnelles agrégées et/ou déduites, que nous ou nos partenaires commerciaux pouvons utiliser pour fournir et améliorer nos services respectifs ;"
+      - "Se conformer aux lois et règlements applicables."
+    hosted_by:
+      title: Notre entreprise est hébergée par Heroku.com
+      details: "Heroku.com nous fournit la plateforme en ligne qui nous permet de vous vendre nos produits et services. Vos données peuvent être stockées par le biais du stockage de données, des bases de données et des applications générales de Heroku.com. Elles stockent vos données sur des serveurs sécurisés derrière un pare-feu."
+    payment_gateways:
+      title: Passerelles de paiement sécurisé
+      details: "Toutes les passerelles de paiement direct proposées par Heroku.com et utilisées par notre entreprise respectent les normes établies par PCI-DSS, telles que gérées par le PCI Security Standards Council, qui est un effort conjoint de marques comme Visa, MasterCard, American Express et Discover. Les exigences PCI-DSS contribuent à garantir le traitement sécurisé des informations relatives aux cartes de crédit par notre magasin et ses fournisseurs de services."
+    contact_us:
+      title: Nous contacter
+      details: "Nous pouvons vous contacter pour vous informer sur votre compte, pour résoudre des problèmes avec votre compte, pour résoudre un litige, pour collecter des frais ou des sommes dues, pour sonder votre opinion par le biais d'enquêtes ou de questionnaires, pour envoyer des mises à jour sur notre société, ou si nécessaire pour vous contacter afin de faire respecter notre contrat d'utilisation, les lois nationales applicables, et tout accord que nous pourrions avoir avec vous. À ces fins, nous pouvons vous contacter par courrier électronique, téléphone, messages textuels et courrier postal."
+    privacy_policy_updates:
+      title: Mises à jour de la politique de confidentialité
+      details: "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment, aussi nous vous invitons à la consulter fréquemment. Les modifications et les clarifications prendront effet dès leur publication sur le site web. Si nous apportons des modifications importantes à la présente politique, nous vous informerons ici de sa mise à jour, afin que vous sachiez quelles informations nous recueillons, comment nous les utilisons et dans quelles circonstances, le cas échéant, nous les utilisons et/ou les divulguons. Si vous ne souhaitez plus que nous traitions vos données, veuillez nous contacter à utopy.hostel@gmail.com."

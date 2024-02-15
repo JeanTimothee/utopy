@@ -1,0 +1,141 @@
+en:
+  hello: "Hello world"
+  home:
+    title_1: "Welcome Home"
+    text_1_html: "Utopy is a unique experience on the Basque coast combining discovery and sharing between travellers from all over the world. Make yourself at home in our friendly hostels, fully equipped for your comfort. Enjoy your new home as you wish, live at your own pace, share, meet, escape and relax... all in Biarritz, one of the most beautiful surfing towns in the world. At Utopy, every moment is a new adventure, making our hostel an exceptional place for all travellers in search of the utopia of travel."
+    coast_text_html: "Ideally located on the heights of the Basque coast, Coast welcomes you in a terracotta decor. Let yourself be carried away by the magic of the place, chat with fellow travelers over a good cup of coffee, then grab your surfboard and head for the coastal waves for your best session yet! Immerse yourself in the welcoming world of Coast, where every detail has been carefully thought out to create a warm and relaxing atmosphere, ensuring an unforgettable experience."
+    garden_text_html: "Garden opens its doors to you in a quieter environment. You'll enter in a 'beach house' atmosphere with its navy tones, discover a comfortable and pleasant place, then let yourself be charmed by the tranquility of its garden. The hostel's central location between the beach, city center, train station and airport makes it easy to get around. Garden offers a unique accommodation experience, ideal for those seeking rewarding social interaction on a budget."
+    title_2: "Contact us"
+    name_input: "Name"
+    email_input: "Email"
+    message_input: "Message..."
+    send_button: "SEND"
+    title_3: "About us"
+    text_2_html: "Utopy is an adventure imagined by two childhood friends during their high school years. Our vision was to create an ideal place that brought together our shared passions: friends, adventure and travel. After graduating with degrees in tourism, we embarked on a quest for unique experiences around the world. This led us to discover, study and approve a particular type of accommodation: the hostel. A place for sharing, meeting new people and enjoying a good time, while remaining accessible to even the most modest budgets."
+    text_2_2_html: "It was with our team, no bigger than the two of us, that we founded our company: 'Utopy Hostel'. And so tasted all the joys of entrepreneurship: business plans, town halls, banks, real estate agencies, partners. Then there was the work, leading us to take on the roles of painter, tiler, cabinetmaker, electrician and decorator, while juggling the responsibilities of accountant, communications manager and copywriter. But it's possible! It's been a journey as intense as it has been exciting, culminating in the realization of our dream: the creation of comfortable, user-friendly spaces, true to our initial vision. Utopia can sometimes become reality! Utopy Hostel opened its doors in March 2022. And it's thanks to you, our wonderful customers, that this adventure is so beautiful today. We look forward to many more years at your side!"
+    title_3_2_html: "<strong>Why « Utopy » ?</strong>"
+    text_2_3: "Utopy is a little stylization on our part of the word utopia, which means « ideal dream society » and comes from the Greek eu-topo meaning « good place ». Our logo is reminiscent of the Australian aboriginal symbol for « meeting place ». A nod to the country where our project was born."
+  show:
+    title_1: "DORMITORIES"
+    title_2: "COMMON AREAS"
+    title_3: "PROXIMITY"
+    title_4: "ADDITIONAL INFORMATIONS"
+    text_4_1: "Self check-in from 1:00 PM"
+    text_4_2: "Self check-out from 11:00 am onwards"
+    text_4_3: "Cancellation free of charge: 5 days before your arrival date"
+    text_4_4: "Make sure you get the best prices by booking here!"
+    text_4_5: "Book your surf lessons directly at reception and benefit from discounted rates with our partner Jo Moraiz Surf School."
+    coast:
+      text_1: "Discover our 15-person mixed dormitory offering a social, comfortable and economical travel experience. Our box beds create a spacious personal cocoon equipped with storage, lamp, plug, fan and individual curtains. A perfect blend of privacy and conviviality for a restorative rest. Bed linen is included, and lockers are available (padlocks not included)."
+      text_2: "Discover our welcoming communal spaces, where ideas and stories flow freely, and immerse yourself in the vibrant atmosphere of our international community. Kitchen, living room, bathroom - everything has been designed with your daily comfort in mind. A surf rack is also available for your personal or rented equipment. Free wifi is available throughout the hostel."
+      text_3: "Just a few steps from the hostel, the Basque coast offers a panoramic view of the ocean, where you can admire some of Biarritz's most beautiful sunsets. With its bakery, mini-market, bars and restaurants, the Bibi Beaurivage district is sure to satisfy all your desires. Everything is within walking distance, but the free N10 shuttle bus will get you to the city center and other beaches more quickly. Coast has no parking facilities or bike racks, so please park your bikes on the street (we cannot guarantee availability)."
+    garden:
+      text_1: "Welcome to our spacious mixed dormitory, where community spirit meets modern comfort! Accommodating up to 15 travelers, Garden offers a bed-box experience for guaranteed comfort, as well as a personal space carefully equipped with storage, lamp, plug, fan and individual curtains. The dormitory has air-conditioning, bed linen is included and lockers are available (padlocks not included)."
+      text_2: "Share the stories of your daily adventures in our common areas, where lively conversations mingle with the joyful laughter of new friends. Kitchen, living room, bathroom - everything has been designed with your daily comfort in mind. The garden is accessible during the day, so you can relax and soak up the sun. A surf rack is also available for your personal or rented equipment. Free wifi is available throughout the hostel."
+      text_3: "Located away from Biarritz city center, you can enjoy the tranquility of the surrounding area, do your yoga at Lake Marion, telework at Tropical Coworking or sample the delights of Café de la baleine. Supérette, bakery, restaurants, the Saint-Martin district will satisfy all your desires. Although everything is within walking distance, the free N11 shuttle bus will take you quickly to the city center and beaches. Garden has free parking and a bike rack (we accept no responsibility for this). The train station and airport are within easy reach on foot or by bus."
+      text_4_5: "To find us easily, please use Google Maps rather than Apple Maps."
+  reservation_policy:
+    title: RESERVATION POLICY
+    small_title: "Reservation policy"
+    introduction: "Any reservation request implies adherence to the present terms of sale and full and unreserved acceptance of their provisions."
+    prices:
+      title: "Prices"
+      points:
+        - "To the price mentioned in the reservation will be added at the time of invoicing, the additional services provided by Utopy hostel during the stay."
+        - "Prices are quoted in Euros. VAT and tourist tax are always included. The prices indicated include only the services strictly mentioned in the reservation."
+    reservation_conditions:
+      title: Booking conditions
+      points:
+        - "Reservations can be made:"
+        - "by phone at +33749198463"
+        - "on the utopyhostel.com website"
+        - "via online booking platforms (booking, airbnb)"
+        - "The total amount will be requested in order to guarantee the reservation by credit card only."
+        - "The customer must be the owner of the credit card used to make the reservation."
+        - "The reservation is firm and definitive only after receipt of a confirmation e-mail sent to the customer."
+        - "For privatization or group bookings, please contact us at 0749198463"
+    cancellation_conditions:
+      title: Cancellation or modification conditions
+      points:
+        - "The cancellation period without charge is : 5 days before the arrival date. Outside this period, the total amount of the stay will be retained by the hostel."
+        - "In the event of a no-show and in the absence of a cancellation, the full amount of the reservation will be charged. The staff will also be free to rent the bed to other tenants."
+        - "In the event of a shortened stay, the full amount of the stay will be due (except in cases of force majeure)."
+        - "Late arrivals or early departures cannot under any circumstances give rise to a refund. Transportation problems (flights, trains, Uber, etc.) remain the responsibility of the renter and do not constitute sufficient grounds to obtain a refund of the reservation."
+        - "To cancel a reservation, the customer is invited to contact Utopy Hostel directly on +33 (0)749198463 or by sending an email to utopy.hostel@gmail.com"
+        - "Cancellation is effective upon receipt of an e-mail confirming the reservation. The date of receipt of the cancellation request (by email or telephone) will be the date used for the cancellation."
+    private_reservation_conditions:
+      title: Cancellation or modification conditions for privatizations
+      points:
+        - "The deadline for cancellation without charge is 15 days before the date of arrival Outside these deadlines, the total amount of the stay will be retained by the hostel."
+    usage:
+      title: Use
+      arrival_time: "Arrival time 13:00"
+      departure_time: "Departure time 11h00"
+      points:
+        - "The staff will ensure that the property is made available in a condition corresponding to its description."
+        - "The tenant has the right to occupy the house in a peaceful and orderly manner. On departure, the tenant undertakes to leave the property in the same state of cleanliness as he found it on arrival. All fixtures, fittings and furniture in the inventory must be left in the same place as the tenant found them on arrival. Any repairs to installations resulting from negligence on the part of the tenant will be at the tenant's expense."
+        - "Under no circumstances may the tenant sublet the property, even free of charge. This would render the rental contract null and void."
+        - "Under no circumstances may the tenant remain in the property or camp around the property after the rental period has expired, without the permission of the staff. No changes may be made to this contract without the agreement of both parties."
+        - "Arrival is autonomous via email, the tenant can go to the room, and his welcome is assured."
+        - "Departure time is, at the latest, 11 a.m. on the day of departure."
+        - "The number of tenants may not exceed the number indicated on the booking form."
+        - "All extras must be paid at reception before using the service."
+        - "Utopy hostel is not suitable for families with children and is not accessible to minors."
+        - "The staff reserves the right to cancel the rental contract at any time in the event of disrespectful behavior against hostel rules, staff or other tenants."
+        - "For your safety, the hostels are under video surveillance."
+        - "The presence of animals in the house is not allowed. Any tenant who does not respect this rule will cancel their rental contract."
+    insurance:
+      title: Insurance
+      description: "Utopy hostel assumes no responsibility for theft, loss or damage to guests' personal belongings."
+    force_majeure:
+      title:
+      description: "Utopy hostel shall not be liable to its customers in the event of non-performance of its obligations due to force majeure. Cases of force majeure or fortuitous events are those usually recognized by the jurisprudence of the French Courts and Tribunals."
+    data_privacy:
+      title: Information Technology and Civil Liberties
+      points:
+        - "In application of the law L.78-17 of January 6, 1978, the customer is informed that information of a personal nature communicated to Utopy hostel is subject to computerized processing, unless the customer expressly objects."
+        - "The customer has the right to access, rectify or delete any personal data at any time by contacting Utopy hostel."
+        - The information requested at the time of booking is essential for the proper processing of your request. Utopy hostel is the sole recipient of this information. Utopy hostel undertakes not to communicate to any third party the information you have entrusted to us."
+    applicable_law:
+      title: Applicable Law
+      description: "Any dispute, claim or litigation relating to the booking of a stay is subject to French law. The Tribunal d'Instance de Bayonne shall have exclusive jurisdiction."
+  legal_mentions:
+    title: Legal Mentions
+    utopy_hostel:
+      company_name: "SARL UTOPY HOSTEL"
+      address: "27 ave de Migron Bat E 64200 BIARRITZ, France"
+      phone: "0749198463"
+      email: "utopy.hostel@gmail.com"
+      capital: "Capital social: 1000€"
+    hosting_provider:
+      title: Hosting Provider
+      details: "Heroku Inc. - 650 7th Street San Francisco, CA USA Et Vercel Inc. 340 S Lemon Ave #4133 - Walnut CA 91789 USA Webmaster: Timothée Régis"
+    activity:
+      title: Activity
+      registration: "Registration: 902170067 RCS BAYONNE"
+      tax_id: "Tax id: 3024613808209"
+      terms_of_sale: "General Terms and Conditions of Sale (GTCS)"
+    cookie_usage:
+      title: Cookie usage
+      details: "A cookie is an IT tool used to track and analyze a user's behavior on the Internet (browsing the web, a website, an application, etc.). Cookies requiring user consent are those used to personalize advertising and those linked to social networks. You can block cookies by changing your browser settings. If you no longer wish us to process your data, please contact us at utopy.hostel@gmail.com. If you accept cookies, your consent will be stored for up to 13 months."
+    privacy_policy:
+      title: Privacy Policy
+      details: "We receive, collect and store any information you enter on our website or provide to us in any other way. In addition, we collect the Internet Protocol (IP) address used to connect your computer to the Internet; login; e-mail address; password; computer and connection information and purchase history. We may use software tools to measure and collect session information, including page response times, duration of visits to particular pages, information about interaction between pages and methods used to navigate away from the page. We also collect personally identifiable information (including name, e-mail address, communications); payment details (including credit card information), comments, feedback, product ratings, recommendations and personal profile. When you make a transaction on our website, as part of the process, we collect the personal information you give us, such as your name, address and e-mail address. Your personal information will only be used for the specific purposes mentioned above. We collect this non-personal and personal information for the following purposes:"
+    privacy_policy_usage:
+      - "Provide and operate the services;"
+      - "To provide our users with ongoing Assistance and technical support;"
+      - "To be able to contact our visitors and users with general or personalized service-related notices and promotional messages;"
+      - "To create aggregated statistical data and other aggregated and/or inferred non-personal information, which we or our business partners may use to provide and improve our respective services;"
+      - "To comply with applicable laws and regulations."
+    hosted_by:
+      title: Our company is hosted by Heroku.com
+      details: "Heroku.com provides us with the online platform that enables us to sell our products and services to you. Your data may be stored through Heroku.com's data storage, databases and general applications. They store your data on secure servers behind a firewall."
+    payment_gateways:
+      title: Secure payment gateways
+      details: "All direct payment gateways offered by Heroku.com and used by our company comply with the standards set by PCI-DSS, as managed by the PCI Security Standards Council, which is a joint effort of brands such as Visa, MasterCard, American Express and Discover. PCI-DSS requirements help ensure the secure processing of credit card information by our store and its service providers."
+    contact_us:
+      title: Contact us
+      details: "We may contact you to inform you about your account, to resolve problems with your account, to resolve a dispute, to collect fees or monies owed, to survey your opinion through surveys or questionnaires, to send updates about our company, or as necessary to contact you to enforce our user agreement, applicable national laws, and any agreements we may have with you. For these purposes, we may contact you by e-mail, telephone, text messages and post."
+    privacy_policy_updates:
+      title: Privacy policy updates
+      details: "We reserve the right to change this privacy policy at any time, so please check back frequently. Modifications and clarifications will take effect as soon as they are published on the website. If we make material changes to this policy, we will notify you here of the updated policy so that you are aware of what information we collect, how we use it and under what circumstances, if any, we use and/or disclose it. If you no longer wish us to process your data, please contact us at utopy.hostel@gmail.com."

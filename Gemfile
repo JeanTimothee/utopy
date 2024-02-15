@@ -35,6 +35,7 @@ gem "geocoder"
 # Cloudinary
 gem "cloudinary"
 
+gem "pry-byebug"
 # Admin
 gem "rails_admin", "3.0"
 

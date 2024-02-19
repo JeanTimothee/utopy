@@ -1,0 +1,28 @@
+.modal-body {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#success-modal {
+  text-align: center;
+  background: $white;
+  width: 90%;
+  padding: 8px;
+  i {
+    color: lightgreen;
+    font-size: 28px;
+    padding-left: 0.5rem;
+  }
+}
+
+.dismiss-container {
+  text-align: end;
+  padding-bottom: 10px;
+}

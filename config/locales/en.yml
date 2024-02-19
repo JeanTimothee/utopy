@@ -139,3 +139,21 @@ en:
     privacy_policy_updates:
       title: Privacy policy updates
       details: "We reserve the right to change this privacy policy at any time, so please check back frequently. Modifications and clarifications will take effect as soon as they are published on the website. If we make material changes to this policy, we will notify you here of the updated policy so that you are aware of what information we collect, how we use it and under what circumstances, if any, we use and/or disclose it. If you no longer wish us to process your data, please contact us at utopy.hostel@gmail.com."
+  success:
+    reservation: "Booking confirmed"
+    from: "From"
+    to: "to"
+    at: "at"
+    thanks: "Thanks for your trust, we wish you a pleasant stay !"
+    email: "You will soon receive an email with all the information needed."
+  confirm_mail:
+    hi: "Hello"
+    text_1:
+      text: "Thank you for booking a bunk bed at Utopy"
+      from: "from"
+      to: "to"
+    text_2: "You'll be staying in a 15-person dormitory. Bed linen is included, but remember to bring your own towel and padlock if necessary."
+    text_3: "Your check-in will be autonomous, and we will send you a message with all the necessary information on the day of your arrival."
+    text_4: "Remember to check your EMAILS and SPAM when you arrive on site. 😉"
+    text_5: "If you have any questions, don't hesitate to send us a message."
+    bye: "See you soon at"

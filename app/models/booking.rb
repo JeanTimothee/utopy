@@ -8,6 +8,7 @@ class Booking < ApplicationRecord
   validate :end_date_after_start_date
 
   validates :start_date, :end_date, presence: true
+  validates :status, inclusion: { in: %w(pending confirmed) }
 
   def all_beds
     beds_bookings.map(&:bed)

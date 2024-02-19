@@ -6,6 +6,20 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.booking = @booking
     if @contact.save
+      ContactMailer.with(booking: @booking).confirmation_email.deliver_later
+      @booking.status = "confirmed"
+      if params[:locale] == "en"
+        start_date = @booking.start_date.strftime("%Y/%m/%d")
+        end_date = @booking.end_date.strftime("%Y/%m/%d")
+      else
+        start_date = @booking.start_date.strftime("%d/%m/%Y")
+        end_date = @booking.end_date.strftime("%d/%m/%Y")
+      end
+      flash[:booking_successfull] = {
+        start_date: start_date,
+        end_date: end_date,
+        hostel_name: @booking.hostel.name
+      }
       redirect_to root_path
     else
       @hostel = @booking.hostel

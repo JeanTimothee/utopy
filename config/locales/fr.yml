@@ -139,3 +139,21 @@ fr:
     privacy_policy_updates:
       title: Mises à jour de la politique de confidentialité
       details: "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment, aussi nous vous invitons à la consulter fréquemment. Les modifications et les clarifications prendront effet dès leur publication sur le site web. Si nous apportons des modifications importantes à la présente politique, nous vous informerons ici de sa mise à jour, afin que vous sachiez quelles informations nous recueillons, comment nous les utilisons et dans quelles circonstances, le cas échéant, nous les utilisons et/ou les divulguons. Si vous ne souhaitez plus que nous traitions vos données, veuillez nous contacter à utopy.hostel@gmail.com."
+  success:
+    reservation: "Reservation confirmée"
+    from: "Du"
+    to: "au"
+    at: "chez"
+    thanks: "Merci pour votre confiance et nous vous souhaitons un agréable séjour !"
+    email: "Vous recevrez prochainement un email récapitulatif."
+  confirm_mail:
+    hi: "Bonjour"
+    text_1:
+      text: "Merci pour votre réservation d'un lit superposé chez Utopy"
+      from: "du"
+      to: "au"
+    text_2: "Vous séjournerez dans un dortoir de 15 personnes. Les draps sont inclus mais pensez a ramener votre serviette et cadenas si nécessaire."
+    text_3: "Votre check-in se fera en autonomie, pour cela, nous vous enverrons un message avec toutes les informations nécessaires à celui-ci le jour de votre arrivée."
+    text_4: "Pensez à vérifier vos EMAILS et SPAM à votre arrivée sur place 😉"
+    text_5: "Si vous avez des questions n'hésitez pas à nous envoyer un message."
+    bye: "A Bientôt chez"

@@ -1,0 +1,13 @@
+  Booking for <%= @booking.hostel.name.upcase %>:
+
+    - nb of beds: <%= @booking.number_of_beds %>
+    - check-in: <%= @booking.start_date.strftime("%d/%m/%Y") %>
+    - check-out: <%= @booking.end_date.strftime("%d/%m/%Y") %>
+
+
+  Client:
+
+    name: <%= @booking.contact.name %>
+    email: <%= @booking.contact.email %>
+    country: <%= @booking.contact.country %>
+    birthdate: <%= @booking.contact.birthdate.strftime('%d/%m/%Y') %>

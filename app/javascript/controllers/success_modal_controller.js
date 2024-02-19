@@ -6,7 +6,6 @@ export default class extends Controller {
   }
 
   close() {
-    console.log("yo");
     this.element.classList.add("d-none")
   }
 }

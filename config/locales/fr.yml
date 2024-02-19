@@ -149,7 +149,8 @@ fr:
   confirm_mail:
     hi: "Bonjour"
     text_1:
-      text: "Merci pour votre réservation d'un lit superposé chez Utopy"
+      text: "Merci pour votre réservation de"
+      bunk: "lit(s) superposé(s) chez Utopy"
       from: "du"
       to: "au"
     text_2: "Vous séjournerez dans un dortoir de 15 personnes. Les draps sont inclus mais pensez a ramener votre serviette et cadenas si nécessaire."

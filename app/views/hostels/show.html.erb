@@ -149,19 +149,19 @@
         <div id="booking-desktop" class="container">
           <% if @booking.persisted? %>
             <%= simple_form_for [@booking, @contact] do |f| %>
-
-              <div class="d-flex justify-content-between">
-                <%= f.input :phone %>
-                <%= f.input :birthdate,
-                    error: 'Renseignez votre date de naissance !',
-                    as: :string,
-                    input_html: { data: { controller: "birthdate" } } %>
+              <div class="top-form">
+                <div class="d-flex justify-content-between">
+                  <%= f.input :phone %>
+                  <%= f.input :birthdate,
+                      as: :string,
+                      input_html: { data: { controller: "birthdate" } } %>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <%= f.input :email %>
+                  <%= f.input :name %>
+                </div>
+                <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "Germany", "Netherlands", "New Zealand", "Spain"]  %>
               </div>
-              <div class="d-flex justify-content-between">
-                <%= f.input :email %>
-                <%= f.input :name %>
-              </div>
-              <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "Germany", "Netherlands", "New Zealand", "Spain"]  %>
               <%= f.button :submit, "Checkout", class:"book-btn-modal #{@hostel.name.downcase}-background" %>
             <% end %>
           <% else %>
@@ -207,11 +207,9 @@
 
         <% if @booking.persisted? %>
           <%= simple_form_for [@booking, @contact] do |f| %>
-
             <div class="d-flex justify-content-between">
               <%= f.input :phone %>
               <%= f.input :birthdate,
-                  error: 'Renseignez votre date de naissance !',
                   as: :string,
                   input_html: { data: { controller: "birthdate" } } %>
             </div>

@@ -149,7 +149,8 @@ en:
   confirm_mail:
     hi: "Hello"
     text_1:
-      text: "Thank you for booking a bunk bed at Utopy"
+      text: "Thank you for booking"
+      bunk: "bunk bed(s) at Utopy"
       from: "from"
       to: "to"
     text_2: "You'll be staying in a 15-person dormitory. Bed linen is included, but remember to bring your own towel and padlock if necessary."

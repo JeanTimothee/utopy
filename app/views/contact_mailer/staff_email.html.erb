@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Booking for <%= @booking.hostel.name.upcase %>:</h3>
+  <ul>
+    <li><p>nb of beds: <strong><%= @booking.number_of_beds %></strong></p></li>
+    <li><p>check-in: <strong><%= @booking.start_date.strftime("%d/%m/%Y") %></strong></p></li>
+    <li><p>check-out: <strong><%= @booking.end_date.strftime("%d/%m/%Y") %></strong></p></li>
+  </ul>
+  <br>
+  <br>
+  <h3>Client:</h3>
+  <ul>
+    <li>name: <%= @booking.contact.name %></li>
+    <li>email: <%= @booking.contact.email %></li>
+    <li>country: <%= @booking.contact.country %></li>
+    <li>birthdate: <%= @booking.contact.birthdate.strftime('%d/%m/%Y') %></li>
+  </ul>
+</div>

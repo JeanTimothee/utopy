@@ -5,22 +5,22 @@ class ContactsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @contact = Contact.new(contact_params)
     @contact.booking = @booking
+
     if @contact.save
       ContactMailer.with(booking: @booking).confirmation_email.deliver_later
+      ContactMailer.with(booking: @booking).staff_email.deliver_later
+
       @booking.status = "confirmed"
-      if params[:locale] == "en"
-        start_date = @booking.start_date.strftime("%Y/%m/%d")
-        end_date = @booking.end_date.strftime("%Y/%m/%d")
-      else
-        start_date = @booking.start_date.strftime("%d/%m/%Y")
-        end_date = @booking.end_date.strftime("%d/%m/%Y")
-      end
-      flash[:booking_successfull] = {
-        start_date: start_date,
-        end_date: end_date,
-        hostel_name: @booking.hostel.name
-      }
-      redirect_to root_path
+      format = ( params[:locale] == "en" ? "%Y/%m/%d": "%d/%m/%Y" )
+
+      flash[:booking_successfull] =
+        {
+          start_date: @booking.start_date.strftime(format),
+          end_date: @booking.end_date.strftime(format),
+          hostel_name: @booking.hostel.name
+        }
+
+      redirect_to root_path, flash[:booking_successfull]
     else
       @hostel = @booking.hostel
       render 'hostels/show', status: :unprocessable_entity

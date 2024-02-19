@@ -21,21 +21,11 @@
           </button>
         </div>
         <p><%= t('success.reservation') %>   <i class="fa-solid fa-check"></i></p>
-        <p><%= t('success.from') %> <%= "#{flash[:booking_successfull][:start_date]}" %> <%= t('success.to') %> <%= "#{flash[:booking_successfull][:end_date]}" %> <%= t('success.at') %> <%= "#{flash[:booking_successfull][:hostel_name]}" %> Utopy Hostel.</p>
+        <p><%= t('success.from') %> <%= flash[:booking_successfull]["start_date"] %> <%= t('success.to') %> <%= flash[:booking_successfull]["end_date"] %> <%= t('success.at') %> <%= flash[:booking_successfull]["hostel_name"] %> Utopy Hostel.</p>
         <p><%= t('success.thanks') %> 🤙</p>
-        <p><%= t('success.email') %></p>
+        <p class="last" ><%= t('success.email') %></p>
       </div>
     </div>
   </div>
 
 <% end %>
-
-  <%# confirm_mail:
-    hi: "Bonjour"
-    text_1: "Merci pour votre réservation d'un lit superposé chez Utopy"
-      to: "au"
-    text_2: "Vous séjournerez dans un dortoir de 15 personnes. Les draps sont inclus mais pensez a ramener votre serviette et cadenas si nécessaire."
-    text_3: "Votre check-in se fera en autonomie, pour cela, nous vous enverrons un message avec toutes les informations nécessaires à celui-ci le jour de votre arrivée."
-    text_4: "Pensez à vérifier vos EMAILS et SPAM à votre arrivée sur place 😉"
-    text_5: "Si vous avez des questions n'hésitez pas à nous envoyer un message."
-    bye: "A Bientôt chez" %>

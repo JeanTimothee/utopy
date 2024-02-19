@@ -36,6 +36,7 @@ gem "geocoder"
 gem "cloudinary"
 
 gem "pry-byebug"
+
 # Admin
 gem "rails_admin", "3.0"
 
@@ -63,6 +64,10 @@ gem "sassc-rails"
 
 group :development, :test do
   gem "dotenv-rails"
+
+  # test mail
+  gem 'letter_opener', group: :development
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
 end
@@ -85,4 +90,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-gem "sassc-rails"

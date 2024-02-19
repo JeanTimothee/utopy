@@ -2,7 +2,7 @@
 
   <%= t('confirm_mail.hi') %> <%= @booking.contact.name %>,
 
-  <%= t('confirm_mail.text_1.text') %> <%= @booking.hostel.name.upcase %> <%= t('confirm_mail.text_1.from') %> <%= @booking.start_date.strftime(format) %> <%= t('confirm_mail.text_1.to') %> <%= @booking.end_date.strftime(format) %>.
+  <%= t('confirm_mail.text_1.text') %> <%= @booking.number_of_beds %> <%= t('confirm_mail.text_1.bunk') %> <%= @booking.hostel.name.upcase %> <%= t('confirm_mail.text_1.from') %> <%= @booking.start_date.strftime(format) %> <%= t('confirm_mail.text_1.to') %> <%= @booking.end_date.strftime(format) %>.
 
   <%= t('confirm_mail.text_2') %>
 
@@ -13,3 +13,7 @@
   <%= t('confirm_mail.text_5') %>
 
   <%= t('confirm_mail.bye') %> <%= @booking.hostel.name.upcase %> Utopy Hostel
+
+  Phone / Whatsapp: +33749198463
+  Email: utopy.hostel@gmail.com
+  Website: utopyhostel.com

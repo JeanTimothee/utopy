@@ -1,7 +1,8 @@
 puts 'Destroying all records..'
 User.destroy_all
-Hostel.destroy_all
+Contact.destroy_all
 Booking.destroy_all
+Hostel.destroy_all
 
 puts '-------------------------'
 puts 'Creating users...'

@@ -15,9 +15,12 @@ export default class extends Controller {
     flatpickr(this.startDateTarget, {
       mode: "range",
       inline: true,
+      minDate: new Date(),
       disable: bookedDates,
-      defaultDate: new Date(),
-      width: '100%'
+      width: '100%',
+      "locale": {
+        "firstDayOfWeek": 1 // start week on Monday
+    }
     });
     this.calculate();
   }

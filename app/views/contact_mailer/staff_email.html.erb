@@ -9,7 +9,7 @@
   <br>
   <h3>Client:</h3>
   <ul>
-    <li>name: <%= @booking.contact.name %></li>
+    <li>name: <%= @booking.contact.first_name %> <%= @booking.contact.last_name %></li>
     <li>email: <%= @booking.contact.email %></li>
     <li>country: <%= @booking.contact.country %></li>
     <li>birthdate: <%= @booking.contact.birthdate.strftime('%d/%m/%Y') %></li>

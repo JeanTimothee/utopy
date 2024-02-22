@@ -2,8 +2,9 @@ en:
   hello: "Hello world"
   home:
     title_1: "Welcome Home"
+    title_hostels: "Our Hostels"
     text_1_html: "Utopy is a unique experience on the Basque coast combining discovery and sharing between travellers from all over the world. Make yourself at home in our friendly hostels, fully equipped for your comfort. Enjoy your new home as you wish, live at your own pace, share, meet, escape and relax... all in Biarritz, one of the most beautiful surfing towns in the world. At Utopy, every moment is a new adventure, making our hostel an exceptional place for all travellers in search of the utopia of travel."
-    coast_text_html: "Ideally located on the heights of the Basque coast, Coast welcomes you in a terracotta decor. Let yourself be carried away by the magic of the place, chat with fellow travelers over a good cup of coffee, then grab your surfboard and head for the coastal waves for your best session yet! Immerse yourself in the welcoming world of Coast, where every detail has been carefully thought out to create a warm and relaxing atmosphere, ensuring an unforgettable experience."
+    coast_text_html: "Ideally located on the heights of the Basque coast, Coast welcomes you in a terracotta vibe. Let yourself be carried away by the magic of the place, chat with fellow travelers over a good cup of coffee, then grab your surfboard and head for the coastal waves for your best session yet! Immerse yourself in the welcoming world of Coast, where every detail has been carefully thought out to create a warm and relaxing atmosphere, ensuring an unforgettable experience."
     garden_text_html: "Garden opens its doors to you in a quieter environment. You'll enter in a 'beach house' atmosphere with its navy tones, discover a comfortable and pleasant place, then let yourself be charmed by the tranquility of its garden. The hostel's central location between the beach, city center, train station and airport makes it easy to get around. Garden offers a unique accommodation experience, ideal for those seeking rewarding social interaction on a budget."
     title_2: "Contact us"
     name_input: "Name"
@@ -21,12 +22,13 @@ en:
     title_3: "PROXIMITY"
     title_4: "ADDITIONAL INFORMATIONS"
     text_4_1: "Self check-in from 1:00 PM"
-    text_4_2: "Self check-out from 11:00 am onwards"
+    text_4_2: "Self check-out at 11:00 AM"
     text_4_3: "Cancellation free of charge: 5 days before your arrival date"
     text_4_4: "Make sure you get the best prices by booking here!"
     text_4_5: "Book your surf lessons directly at reception and benefit from discounted rates with our partner Jo Moraiz Surf School."
+    taxes: "Taxes and charges included"
     coast:
-      text_1: "Discover our 15-person mixed dormitory offering a social, comfortable and economical travel experience. Our box beds create a spacious personal cocoon equipped with storage, lamp, plug, fan and individual curtains. A perfect blend of privacy and conviviality for a restorative rest. Bed linen is included, and lockers are available (padlocks not included)."
+      text_1: "Discover our 15-person mixed dormitory offering a social, comfortable and economical travel experience. Our box beds create a spacious personal cocoon equipped with storage, lamp, plug, fan and individual curtains. A perfect blend of privacy and conviviality for a restorative rest. Bed linen is included, and lockers are available (padlocks and towels not included)."
       text_2: "Discover our welcoming communal spaces, where ideas and stories flow freely, and immerse yourself in the vibrant atmosphere of our international community. Kitchen, living room, bathroom - everything has been designed with your daily comfort in mind. A surf rack is also available for your personal or rented equipment. Free wifi is available throughout the hostel."
       text_3: "Just a few steps from the hostel, the Basque coast offers a panoramic view of the ocean, where you can admire some of Biarritz's most beautiful sunsets. With its bakery, mini-market, bars and restaurants, the Bibi Beaurivage district is sure to satisfy all your desires. Everything is within walking distance, but the free N10 shuttle bus will get you to the city center and other beaches more quickly. Coast has no parking facilities or bike racks, so please park your bikes on the street (we cannot guarantee availability)."
     garden:
@@ -144,7 +146,7 @@ en:
     from: "From"
     to: "to"
     at: "at"
-    thanks: "Thanks for your trust, we wish you a pleasant stay !"
+    thanks: "Thank you and see you soon!"
     email: "You will soon receive an email with all the information needed."
   confirm_mail:
     hi: "Hello"

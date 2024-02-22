@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @hostels = Hostel.all
 
-    @markers = @hostels.geocoded.map do |hostel|
+    @markers = @hostels.map do |hostel|
       # 43.47363004428891, -1.56565228917027
       {
         lat: (hostel.name == "Garden" ? "43.47241703934897" : "43.473596959312864"),

@@ -18,7 +18,7 @@ puts '-------------------------'
 puts 'Creating hostels...'
 
 coast = Hostel.create!(name:'Coast', address: '22 rue Harispe, 64200 Biarritz', capacity: 15, opening: Date.new(2024,3,1), closing: Date.new(2024,11,4))
-garden = Hostel.create!(name:'Garden', address: '27 avenue Migron, 64200 Biarritz', capacity: 15, opening: Date.new(2024,3,1), closing: Date.new(2024,11,4))
+garden = Hostel.create!(name:'Garden', address: '27 avenue Migron BAT E, 64200 Biarritz', capacity: 15, opening: Date.new(2024,3,1), closing: Date.new(2024,11,4))
 
 puts "#{Hostel.count} hostels created!"
 
@@ -71,9 +71,9 @@ pricing_garden.save!
 
 puts "Creating bookings with contacts "
 
-contact_1 = Contact.new(name:'Timothée', birthdate: Date.new(1993,9,1), phone: '0769181771', country:'France', email: 'tim@gmail.com')
-contact_2 = Contact.new(name: 'Gladys', birthdate: Date.new(1993,8,27), phone: '0769181771', country:'France', email: 'gladys@gmail.com')
-contact_3 = Contact.new(name:'Pauline', birthdate: Date.new(1994,3,5), phone: '0769181771', country:'France', email: 'pauline@gmail.com')
+contact_1 = Contact.new(first_name:'Timothée', last_name:'Régis', birthdate: Date.new(1993,9,1), phone: '0769181771', country:'France', email: 'tim@gmail.com')
+contact_2 = Contact.new(first_name: 'Gladys', last_name:'Barth', birthdate: Date.new(1993,8,27), phone: '0769181771', country:'France', email: 'gladys@gmail.com')
+contact_3 = Contact.new(first_name:'Pauline', last_name:'Popo', birthdate: Date.new(1994,3,5), phone: '0769181771', country:'France', email: 'pauline@gmail.com')
 
 contacts = [contact_1, contact_2, contact_3]
 

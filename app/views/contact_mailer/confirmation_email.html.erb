@@ -1,6 +1,6 @@
 <% format = (params[:locale] == "en" ? '%Y/%m/%d' : '%d/%m/%Y') %>
 <div class="container">
-  <h3><%= t('confirm_mail.hi') %> <%= @booking.contact.name %>,</h3>
+  <h3><%= t('confirm_mail.hi') %> <%= @booking.contact.first_name %> <%= @booking.contact.last_name %>,</h3>
   <br>
   <p><%= t('confirm_mail.text_1.text') %> <strong><%= @booking.number_of_beds %></strong> <%= t('confirm_mail.text_1.bunk') %> <%= @booking.hostel.name.upcase %> <%= t('confirm_mail.text_1.from') %> <strong><%= @booking.start_date.strftime(format) %></strong> <%= t('confirm_mail.text_1.to') %> <strong><%= @booking.end_date.strftime(format) %></strong>.</p>
   <br>

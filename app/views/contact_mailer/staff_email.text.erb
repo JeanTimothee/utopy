@@ -7,7 +7,7 @@
 
   Client:
 
-    name: <%= @booking.contact.name %>
+    name: <%= @booking.contact.first_name %> <%= @booking.contact.last_name %>
     email: <%= @booking.contact.email %>
     country: <%= @booking.contact.country %>
     birthdate: <%= @booking.contact.birthdate.strftime('%d/%m/%Y') %>

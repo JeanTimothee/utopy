@@ -83,6 +83,12 @@
         <%= link_to "#{root_path}#contact", class: "nav-link" do %>
           <h3>Contact</h3>
         <% end %>
+        <%= link_to root_path(locale: nil), class: "nav-link" do %>
+          <%= cl_image_tag 'Utopy/FRA' %>
+        <% end %>
+        <%= link_to root_path(locale: 'en'), class:"nav-link" do %>
+          <%= cl_image_tag 'Utopy/GBR' %>
+        <% end %>
       </div>
     </div>
   </div>

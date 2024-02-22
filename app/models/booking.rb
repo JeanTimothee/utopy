@@ -6,6 +6,7 @@ class Booking < ApplicationRecord
 
   validate :no_overlapping_bookings
   validate :end_date_after_start_date
+  validate :before_4_pm
 
   validates :start_date, :end_date, presence: true
   validates :status, inclusion: { in: %w(pending confirmed) }
@@ -59,6 +60,12 @@ class Booking < ApplicationRecord
 
 
   private
+
+  def before_4_pm
+    if start_date == Date.today && Time.now.hour >= 16
+      errors.add(:start_date, "must be before 16:00 today")
+    end
+  end
 
   def no_overlapping_bookings
     all_beds.each do |bed|

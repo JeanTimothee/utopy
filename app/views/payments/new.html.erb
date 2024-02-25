@@ -1,0 +1,51 @@
+<div class="modal-body">
+  <div id="success-modal" class="p-4 text-start">
+    <div class="d-flex justify-content-between">
+      <h1>Checkout summary</h1>
+      <div class="dismiss-container">
+        <%= link_to booking_payments_cancel_path(@booking) do %>
+          <button type="button" class="btn-close" aria-label="Close">
+          </button>
+        <% end %>
+      </div>
+    </div>
+    <p class="mt-2" >Your reservation of <%= @booking.all_beds.count %> bed(s) for <%= (@booking.end_date - @booking.start_date).to_i %> night(s)</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Price HT</td>
+          <td id="price_ht"><%= @price_ht %> €</td>
+        </tr>
+        <tr>
+          <td>TVA 10%</td>
+          <td id="tva"><%= @tva %> €</td>
+        </tr>
+        <tr>
+          <td>Visitors tax</td>
+          <td id="visitors_tax"><%= (@visitor_tax / 100.0) %> €</td>
+        </tr>
+        <tr>
+          <td>Total price</td>
+          <td id="total_price"><%= @booking.total_price_cents.to_s.insert(-3, ".") %> €</td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="pay" class="p-1 book-btn-modal <%= @booking.hostel.name.downcase %>-background">Pay</button>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      const paymentButton = document.getElementById('pay');
+      paymentButton.addEventListener('click', () => {
+        const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+        stripe.redirectToCheckout({
+          sessionId: '<%= @booking.checkout_session_id %>'
+        });
+      });
+    </script>
+  </div>
+</div>

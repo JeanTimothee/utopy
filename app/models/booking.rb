@@ -11,6 +11,7 @@ class Booking < ApplicationRecord
   validates :start_date, :end_date, presence: true
   validates :status, inclusion: { in: %w(pending confirmed) }
 
+
   def all_beds
     beds_bookings.map(&:bed)
   end
@@ -71,7 +72,7 @@ class Booking < ApplicationRecord
     all_beds.each do |bed|
       overlapping_bookings = bed.bookings.where("start_date < ? AND end_date > ? OR start_date >= ? AND end_date <= ?", end_date, start_date, start_date, end_date)
 
-      if overlapping_bookings.exists?
+      if overlapping_bookings.exists? && overlapping_bookings.first != self
         errors.add(:base, "Bed #{bed.number} is already booked for the selected dates")
       end
     end

@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
     resources :bookings, only: [:show] do
       resources :contacts, only: :create
+      resources :payments, only: :new
+      get 'payments/success', to: 'payments#success'
+      get 'payments/cancel', to: 'payments#cancel'
     end
 
   end

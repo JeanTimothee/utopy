@@ -41,4 +41,8 @@ class BookingsController < ApplicationController
   def set_hostel
     @hostel = Hostel.find(params[:hostel_id])
   end
+
+  def booking_params
+    require(:booking).permit(:start_date, :end_date, :status, :checkout_session_id, :number_of_beds, :total_price_cents)
+  end
 end

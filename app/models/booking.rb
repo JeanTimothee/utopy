@@ -51,7 +51,7 @@ class Booking < ApplicationRecord
         pricing.may_october
       when (Date.new(date.year,6,1)..Date.new(date.year,6,30)) || (Date.new(date.year,9,1)..Date.new(date.year,9,30))
         pricing.june_september
-      when (Date.new(date.year,7,1)..Date.new(date.year,7,12)) || (Date.new(date.year,7,16)..Date.new(date.year,7,25)) || (Date.new(date.year,7,31)..Date.new(date.year,8,11)) || (Date.new(date.year,8,16)..Date.new(date.year,8,31))
+      when (Date.new(date.year,7,1)..Date.new(date.year,7,8)) || (Date.new(date.year,7,16)..Date.new(date.year,8,13)) || (Date.new(date.year,8,19)..Date.new(date.year,8,31))
         pricing.summer
       else
         pricing.special_weekends

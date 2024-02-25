@@ -1,8 +1,8 @@
-puts 'Destroying all records..'
-User.destroy_all
-Contact.destroy_all
-Booking.destroy_all
-Hostel.destroy_all
+# puts 'Destroying all records..'
+# User.destroy_all
+# Contact.destroy_all
+# Booking.destroy_all
+# Hostel.destroy_all
 
 puts '-------------------------'
 puts 'Creating users...'
@@ -69,28 +69,28 @@ pricing_garden = Pricing.new(
 pricing_garden.hostel = garden
 pricing_garden.save!
 
-puts "Creating bookings with contacts "
+# puts "Creating bookings with contacts "
 
-contact_1 = Contact.new(first_name:'Timothée', last_name:'Régis', birthdate: Date.new(1993,9,1), phone: '0769181771', country:'France', email: 'tim@gmail.com')
-contact_2 = Contact.new(first_name: 'Gladys', last_name:'Barth', birthdate: Date.new(1993,8,27), phone: '0769181771', country:'France', email: 'gladys@gmail.com')
-contact_3 = Contact.new(first_name:'Pauline', last_name:'Popo', birthdate: Date.new(1994,3,5), phone: '0769181771', country:'France', email: 'pauline@gmail.com')
+# contact_1 = Contact.new(first_name:'Timothée', last_name:'Régis', birthdate: Date.new(1993,9,1), phone: '0769181771', country:'France', email: 'tim@gmail.com')
+# contact_2 = Contact.new(first_name: 'Gladys', last_name:'Barth', birthdate: Date.new(1993,8,27), phone: '0769181771', country:'France', email: 'gladys@gmail.com')
+# contact_3 = Contact.new(first_name:'Pauline', last_name:'Popo', birthdate: Date.new(1994,3,5), phone: '0769181771', country:'France', email: 'pauline@gmail.com')
 
-contacts = [contact_1, contact_2, contact_3]
+# contacts = [contact_1, contact_2, contact_3]
 
-contacts.each_with_index do |contact, i|
-  booking = Booking.new(start_date: Date.new(2024,8,(3 + i)), end_date: Date.new(2024,8,(7 + i)))
-  booking.hostel_id = Hostel.first.id
-  booking.total_price_cents = 4000 * (booking.end_date - booking.end_date).to_i
-  booking.number_of_beds = 1
-  booking.save!
-  contact.booking = booking
-  contact.save!
-  beds_booking = BedsBooking.new()
-  beds_booking.booking = booking
-  bed = Bed.joins(:hostel).where(hostel: { name:'Coast'})[i]
-  beds_booking.bed = bed
-  beds_booking.save!
-end
+# contacts.each_with_index do |contact, i|
+#   booking = Booking.new(start_date: Date.new(2024,8,(3 + i)), end_date: Date.new(2024,8,(7 + i)))
+#   booking.hostel_id = Hostel.first.id
+#   booking.total_price_cents = 4000 * (booking.end_date - booking.end_date).to_i
+#   booking.number_of_beds = 1
+#   booking.save!
+#   contact.booking = booking
+#   contact.save!
+#   beds_booking = BedsBooking.new()
+#   beds_booking.booking = booking
+#   bed = Bed.joins(:hostel).where(hostel: { name:'Coast'})[i]
+#   beds_booking.bed = bed
+#   beds_booking.save!
+# end
 
-puts "#{Booking.count} bookings created!"
+# puts "#{Booking.count} bookings created!"
 puts '-------------------------'

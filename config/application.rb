@@ -27,9 +27,6 @@ module Utopy
 
     config.autoload_lib(ignore: %w(assets tasks))
 
-
-    config.action_mailer.asset_host = 'https://utopyhostel.com'
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

@@ -1,6 +1,6 @@
-
+<% format = (params[:locale] == "en" ? '%Y/%m/%d' : '%d/%m/%Y') %>
   <%= t('confirm_mail.text_0') %>
-  <%= t('confirm_mail.text_1.text') %> <%= t('confirm_mail.text_1.bunk', count: @booking.number_of_beds) %> <strong class="<%= @booking.hostel.name.downcase %>-color" ><%= @booking.hostel.name.upcase %></strong> <%= t('confirm_mail.text_1.from') %> <%= @booking.start_date.strftime(format) %> <%= t('confirm_mail.text_1.from') %> <%= @booking.end_date.strftime(format) %>
+  <%= t('confirm_mail.text_1.text') %> <%= t('confirm_mail.text_1.bunk', count: @booking.number_of_beds) %> <%= @booking.hostel.name.upcase %> <%= t('confirm_mail.text_1.from') %> <%= @booking.start_date.strftime(format) %> <%= t('confirm_mail.text_1.from') %> <%= @booking.end_date.strftime(format) %>
   <%= t('confirm_mail.text_2') %>
 
   Self check-in:

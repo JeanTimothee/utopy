@@ -4,8 +4,9 @@ class ContactMailerPreview < ActionMailer::Preview
     ContactMailer.with(user: User.first, booking: Booking.first).confirmation_email
   end
 
-  def confirm_email
-    @booking = params[:booking]
-    mail(to: @booking.contact.email, subject: "Booking #{@booking.hostel.name} Utopy Hostel")
+  def staff_email
+    @booking = Booking.first
+    ContactMailer.with(user: User.first, booking: Booking.first).staff_email
+    # mail(to: @booking.contact.email, subject: "Booking #{@booking.hostel.name} Utopy Hostel")
   end
 end

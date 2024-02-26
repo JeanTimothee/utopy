@@ -149,14 +149,18 @@ fr:
     thanks: "Merci pour votre confiance, à très bientôt !"
     email: "Vous recevrez prochainement un email récapitulatif."
   confirm_mail:
-    hi: "Bonjour"
+    text_0: "Merci pour votre réservation"
     text_1:
-      text: "Merci pour votre réservation de"
-      bunk: "lit(s) superposé(s) chez Utopy"
+      text: "Vous avez réservé"
+      bunk:
+        zero: "1 lit superposé à"
+        one: "1 lit superposé à"
+        other: "%{count} lits superposés à"
       from: "du"
       to: "au"
     text_2: "Vous séjournerez dans un dortoir de 15 personnes. Les draps sont inclus mais pensez a ramener votre serviette et cadenas si nécessaire."
     text_3: "Votre check-in se fera en autonomie, pour cela, nous vous enverrons un message avec toutes les informations nécessaires à celui-ci le jour de votre arrivée."
     text_4: "Pensez à vérifier vos EMAILS et SPAM à votre arrivée sur place 😉"
     text_5: "Si vous avez des questions n'hésitez pas à nous envoyer un message."
-    bye: "A Bientôt chez"
+    bye: "L'équipe Utopy Hostel "
+    address: "Adresse"

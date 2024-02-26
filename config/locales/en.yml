@@ -149,14 +149,18 @@ en:
     thanks: "Thank you and see you soon!"
     email: "You will soon receive an email with all the information needed."
   confirm_mail:
-    hi: "Hello"
+    text_0: "Thank you for your reservation"
     text_1:
       text: "Thank you for booking"
-      bunk: "bunk bed(s) at Utopy"
+      bunk:
+        zero: "no bunk beds at"
+        one: "1 bunk bed at"
+        other: "%{count} bunk beds at"
       from: "from"
       to: "to"
     text_2: "You'll be staying in a 15-person dormitory. Bed linen is included, but remember to bring your own towel and padlock if necessary."
     text_3: "Your check-in will be autonomous, and we will send you a message with all the necessary information on the day of your arrival."
     text_4: "Remember to check your EMAILS and SPAM when you arrive on site. 😉"
     text_5: "If you have any questions, don't hesitate to send us a message."
-    bye: "See you soon at"
+    bye: "The Utopy Hostel team "
+    address: "Address"

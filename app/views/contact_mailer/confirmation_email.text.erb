@@ -1,19 +1,15 @@
-<% format = (params[:locale] == "en" ? '%Y/%m/%d' : '%d/%m/%Y') %>
 
-  <%= t('confirm_mail.hi') %> <%= @booking.contact.first_name %> <%= @booking.contact.last_name %>,
-
-  <%= t('confirm_mail.text_1.text') %> <%= @booking.number_of_beds %> <%= t('confirm_mail.text_1.bunk') %> <%= @booking.hostel.name.upcase %> <%= t('confirm_mail.text_1.from') %> <%= @booking.start_date.strftime(format) %> <%= t('confirm_mail.text_1.to') %> <%= @booking.end_date.strftime(format) %>.
-
+  <%= t('confirm_mail.text_0') %>
+  <%= t('confirm_mail.text_1.text') %> <%= t('confirm_mail.text_1.bunk', count: @booking.number_of_beds) %> <strong class="<%= @booking.hostel.name.downcase %>-color" ><%= @booking.hostel.name.upcase %></strong> <%= t('confirm_mail.text_1.from') %> <%= @booking.start_date.strftime(format) %> <%= t('confirm_mail.text_1.from') %> <%= @booking.end_date.strftime(format) %>
   <%= t('confirm_mail.text_2') %>
 
-  <%= t('confirm_mail.text_3') %>
-
-  <%= t('confirm_mail.text_4') %>
+  Self check-in:
+    <%= t('confirm_mail.text_3') %>
+    <%= t('confirm_mail.text_4') %>
 
   <%= t('confirm_mail.text_5') %>
+  <%= t('confirm_mail.bye') %> <%= @booking.hostel.name == "Coast" ? '🧡' : '💙'%>
 
-  <%= t('confirm_mail.bye') %> <%= @booking.hostel.name.upcase %> Utopy Hostel
-
-  Phone / Whatsapp: +33749198463
-  Email: utopy.hostel@gmail.com
-  Website: utopyhostel.com
+  📞 Phone/Whatsapp: +33749198463
+  Website: https://www.utopyhostel.com
+  📍 <%= t('confirm_mail.address') %> Utopy <%= @booking.hostel.name %>: <%= @booking.hostel.address %>

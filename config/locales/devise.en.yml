@@ -64,7 +64,7 @@ en:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
 
-
+fr:
   devise:
     confirmations:
       confirmed: Votre compte a bien été confirmé.

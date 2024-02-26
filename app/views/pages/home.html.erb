@@ -1,5 +1,6 @@
 <section id="video-container">
-  <%= cl_video_tag 'Utopy/teaser.mp4', loop:true, autoplay: true, muted:true %>
+  <%# 'Utopy/teaser.mp4' %>
+  <%= cl_video_tag "UTOPY_HOSTEL_HD", loop:true, autoplay: true, muted:true, audio_codec: "none", quality: 100 %>
 </section>
 <div class="container">
   <section class="accueil">
@@ -108,6 +109,10 @@
         </p>
       </div>
 
+      <div class="w-100 text-center join">
+        <h3><a class="" href="mailto:utopy.hostel@gmail.com">Join us:  <strong>utopy.hostel@gmail.com</strong></a></h3>
+      </div>
+
     </div>
   </section>
 <% else %>
@@ -133,12 +138,9 @@
         </div>
       </div>
 
-      <h1 class="title-home" style="margin: 78px 0 12px 0;">Join us!</h1>
-      <div class="w-100 text-center">
-        <a class="mb-8 email-link" href="mailto:utopy.hostel@gmail.com">utopy.hostel@gmail.com</a>
+      <div class="w-100 text-center join">
+        <h3><a class="" href="mailto:utopy.hostel@gmail.com">Join us:  <strong>utopy.hostel@gmail.com</strong></a></h3>
       </div>
-
-
 
     </div>
   </section>

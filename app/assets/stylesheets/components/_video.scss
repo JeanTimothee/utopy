@@ -10,6 +10,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100%
+}
+
+#video-container i {
+  display: none;
 }
 
 @media screen and (min-width: 568px) {
@@ -23,5 +28,18 @@
     left: 0;
     transform: none;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width : 1224px) {
+  #video-container i {
+    display: block;
+    position: absolute;
+    color: $white;
+    top: 90vh;
+    z-index: 5;
+    font-size: 50px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

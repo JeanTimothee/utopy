@@ -1,11 +1,14 @@
 <section id="video-container">
   <%# 'Utopy/teaser.mp4' %>
   <%= cl_video_tag "UTOPY_HOSTEL_HD", loop:true, autoplay: true, muted:true, audio_codec: "none", quality: 100 %>
+  <%= link_to '#accueil' do %>
+    <i class="fa-solid fa-chevron-down fa-fade"></i>
+  <% end %>
 </section>
 <div class="container">
   <section class="accueil">
     <h1 class="title-home"><%= t('home.title_1') %></h1>
-    <p><%= t('home.text_1_html') %>
+    <p id="accueil"><%= t('home.text_1_html') %>
     </p>
   </section>
 </div>

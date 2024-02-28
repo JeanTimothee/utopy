@@ -7,7 +7,8 @@ class ContactsController < ApplicationController
     @contact.booking = @booking
 
     if @contact.save!
-
+      # testing purpose
+      ContactMailer.with(booking: @booking).confirmation_email.deliver_later
       session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [

@@ -1,6 +1,6 @@
 class PaymentsController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action set_booking
+  before_action :set_booking
 
   def new
     @visitor_tax = @booking.all_beds.count * 115

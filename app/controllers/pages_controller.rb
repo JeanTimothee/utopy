@@ -5,7 +5,6 @@ class PagesController < ApplicationController
     @hostels = Hostel.all
 
     @markers = @hostels.map do |hostel|
-      # 43.47363004428891, -1.56565228917027
       {
         lat: (hostel.name == "Garden" ? "43.47241703934897" : "43.473596959312864"),
         lng: (hostel.name == "Garden" ? "-1.5497009611555113" : "-1.5656419880079693"),

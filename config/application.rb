@@ -21,6 +21,8 @@ module Utopy
     config.i18n.default_locale = :fr
     # I18n.available_locales = [:fr, :en]
 
+    config.action_mailer.asset_host = "https://www.utopyhostel.com"
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.

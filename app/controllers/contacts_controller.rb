@@ -31,20 +31,6 @@ class ContactsController < ApplicationController
 
     redirect_to new_booking_payment_path(@booking)
 
-    #   ContactMailer.with(booking: @booking).confirmation_email.deliver_later
-    #   ContactMailer.with(booking: @booking).staff_email.deliver_later
-
-    #   @booking.status = "confirmed"
-    #   format = ( params[:locale] == "en" ? "%Y/%m/%d": "%d/%m/%Y" )
-
-    #   flash[:booking_successfull] =
-    #     {
-    #       start_date: @booking.start_date.strftime(format),
-    #       end_date: @booking.end_date.strftime(format),
-    #       hostel_name: @booking.hostel.name
-    #     }
-
-    #   redirect_to root_path, flash[:booking_successfull]
     else
       @hostel = @booking.hostel
       render 'hostels/show', status: :unprocessable_entity

@@ -1,8 +1,8 @@
 class PaymentsController < ApplicationController
   skip_before_action :authenticate_user!
+  before_action set_booking
 
   def new
-    @booking = Booking.find(params[:booking_id])
     @visitor_tax = @booking.all_beds.count * 115
     @price_ht = ((@booking.total_price_cents - @visitor_tax) / 1.1).round
     @tva = (@price_ht * 0.1).round.to_s.insert(-3, ".")
@@ -32,8 +32,15 @@ class PaymentsController < ApplicationController
   end
 
   def cancel
+    @booking.destroy
     flash[:alert] = "Payment cancelled"
     redirect_to root_path
+  end
+
+  private
+
+  def set_booking
+    @booking = Booking.find(params[:booking_id])
   end
 
 end

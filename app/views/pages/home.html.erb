@@ -35,7 +35,9 @@
           <%= cl_image_tag 'Utopy/coast_bathroom_1', class:'w-100 pt-1' %>
         </div>
       </div>
-      <p class="text-hostel my-4"><%= t('home.coast_text_html') %></p>
+      <div class="text-hostel my-4 d-flex align-items-center">
+        <p><%= t('home.coast_text_html') %></p>
+      </div>
       <%= link_to hostel_path(Hostel.find_by(name:'Coast')), class:'book-btn' do %>
         <h3>Book Coast</h3>
       <% end %>
@@ -52,7 +54,9 @@
           <%= cl_image_tag 'Utopy/garden_bathroom_1', class:'w-100 pt-1' %>
         </div>
       </div>
-      <p class="text-hostel my-4"><%= t('home.garden_text_html') %></p>
+      <div class="text-hostel my-4 d-flex align-items-center">
+        <p class=""><%= t('home.garden_text_html') %></p>
+      </div>
       <%= link_to hostel_path(Hostel.find_by(name:'Garden')), class:'book-btn' do %>
         <h3>Book Garden</h3>
       <% end %>

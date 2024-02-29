@@ -4,14 +4,14 @@
     <li><p>nb of beds: <strong><%= @booking.number_of_beds %></strong></p></li>
     <li><p>check-in: <strong><%= @booking.start_date.strftime("%d/%m/%Y") %></strong></p></li>
     <li><p>check-out: <strong><%= @booking.end_date.strftime("%d/%m/%Y") %></strong></p></li>
+    <li><p>Total Price: <strong><%= @booking.total_price_cents.to_s.insert(-3, ".") %></strong> <%= @booking.status == "confirmed" ? "✅" : "❌" %></p></li>
   </ul>
-  <br>
   <br>
   <h3>Client:</h3>
   <ul>
-    <li>name: <%= @booking.contact.first_name %> <%= @booking.contact.last_name %></li>
-    <li>email: <%= @booking.contact.email %></li>
-    <li>country: <%= @booking.contact.country %></li>
-    <li>birthdate: <%= @booking.contact.birthdate.strftime('%d/%m/%Y') %></li>
+    <li><p>name: <strong><%= @booking.contact.first_name %> <%= @booking.contact.last_name %></strong></p></li>
+    <li><p>email: <strong><%= @booking.contact.email %></strong></p></li>
+    <li><p>country: <strong><%= @booking.contact.country %></strong></p></li>
+    <li><p>birthdate: <strong><%= @booking.contact.birthdate.strftime('%d/%m/%Y') %></strong></p></li>
   </ul>
 </div>

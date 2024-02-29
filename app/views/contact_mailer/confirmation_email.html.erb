@@ -1,34 +1,29 @@
 <% format = (params[:locale] == "en" ? '%Y/%m/%d' : '%d/%m/%Y') %>
-<style>
-  .container { width: 90%; margin: auto; }
-  .coast-color { color: #C45825;}
-  .coast-background { background-color: #C45825; }
-  .garden-color { color: #5D8BB4; }
-  .garden-background { background-color: #5D8BB4; }
-  .box { color: #FAFAFA; padding: 4px 12px;}
-  p { font-size: 20px; }
-  img { width: 100%;}
 
-</style>
-<div class="container">
-  <%= image_tag "#{@booking.hostel.name.downcase}_email" %>
-  <h1><%= t('confirm_mail.text_0') %></h1>
-  <p><%= t('confirm_mail.text_1.text') %> <%= t('confirm_mail.text_1.bunk', count: @booking.number_of_beds) %> <strong class="<%= @booking.hostel.name.downcase %>-color" ><%= @booking.hostel.name.upcase %></strong> <%= t('confirm_mail.text_1.from') %> <strong><%= @booking.start_date.strftime(format) %></strong> <%= t('confirm_mail.text_1.from') %> <strong><%= @booking.end_date.strftime(format) %></strong>.</p>
-  <p style="font-style: italic; font-size:16px!important"><%= t('confirm_mail.text_2') %></p>
-  <p class="<%= @booking.hostel.name.downcase %>-color" style="margin-top: 42px;"><strong>Self check-in:</strong></p>
-  <div class="box <%= @booking.hostel.name.downcase %>-background">
-    <p><%= t('confirm_mail.text_3') %></p>
-    <p><%= t('confirm_mail.text_4') %></p>
+<div class="container" style="width: 90%; margin: auto;">
+  <%= image_tag "#{@booking.hostel.name.downcase}_email", style:"width: 100%;" %>
+  <h1 style="color:black;"><%= t('confirm_mail.text_0') %></h1>
+  <p style="color:black; font-size: 20px;"><%= t('confirm_mail.text_1.text') %> <%= t('confirm_mail.text_1.bunk', count: @booking.number_of_beds) %> <strong class="<%= @booking.hostel.name.downcase %>-color" ><%= @booking.hostel.name.upcase %></strong> <%= t('confirm_mail.text_1.from') %> <strong><%= @booking.start_date.strftime(format) %></strong> <%= t('confirm_mail.text_1.from') %> <strong><%= @booking.end_date.strftime(format) %></strong>.</p>
+  <p style="color:black; font-style: italic; font-size:16px!important"><%= t('confirm_mail.text_2') %></p>
+  <p style="color:black; font-size: 20px; margin-top: 42px; color: <%= @booking.hostel.name == "Coast" ? "#C45825" : "#5D8BB4" %>"><strong>Self check-in:</strong></p>
+  <div style="color: #FAFAFA; padding: 4px 12px; background-color:<%= @booking.hostel.name == "Coast" ? "#C45825" : "#5D8BB4" %>">
+    <p style="font-size: 20px;"><%= t('confirm_mail.text_3') %></p>
+    <p style="font-size: 20px;"><%= t('confirm_mail.text_4') %></p>
   </div>
-  <p><%= t('confirm_mail.text_5') %></p>
-  <p style="margin-bottom: 42px;"><%= t('confirm_mail.bye') %> <%= @booking.hostel.name == "Coast" ? '🧡' : '💙'%></p>
+  <p style="color:black; font-size: 20px;"><%= t('confirm_mail.text_5') %></p>
+  <p style="color:black; font-size: 20px; margin-bottom: 42px;"><%= t('confirm_mail.bye') %> <%= @booking.hostel.name == "Coast" ? '🧡' : '💙'%></p>
 
-  <p style="font-size:16px!important; margin-bottom:0!important">📞 Phone/Whatsapp: +33749198463</p>
-  <p style="font-size:16px!important;margin-top:2px!important;margin-bottom:0!important">🖥️ Website: <a href="https://www.utopyhostel.com">utopyhostel.com</a></p>
-  <p style="font-size:16px!important; margin-top:2px!important;">📍 <%= t('confirm_mail.address') %> Utopy <%= @booking.hostel.name %>: <%= @booking.hostel.address %></p>
+  <p style="color:black; font-size:16px!important; margin-bottom:0!important">📞 Phone/Whatsapp: +33749198463</p>
+  <p style="color:black; font-size:16px!important;margin-top:2px!important;margin-bottom:0!important">🖥️ Website: <a href="https://www.utopyhostel.com">utopyhostel.com</a></p>
   <% if @booking.hostel.name == "Coast" %>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.374736990861!2d-1.5683550239512436!3d43.47364936402536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd516ba859982209%3A0x5909f7dc1e737cc!2sCOAST-%20Utopy%20Hostel!5e0!3m2!1sen!2sfr!4v1708965285303!5m2!1sen!2sfr" width="100%" height="220px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p style="color:black; font-size:16px!important; margin-top:2px!important;">📍 <%= t('confirm_mail.address') %> Utopy <%= @booking.hostel.name %>: <a href="https://maps.app.goo.gl/AEdC5AbtDvvA8jcZA"><%= @booking.hostel.address %></a></p>
+    <a href="https://maps.app.goo.gl/AEdC5AbtDvvA8jcZA">
+      <%= image_tag "coast_email_map"%>
+    </a>
   <% else %>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.433508325322!2d-1.5523040239512877!3d43.47242266410446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5115fb22825b97%3A0x559a67768d2a644!2sGARDEN%20-%20Utopy%20Hostel!5e0!3m2!1sen!2sfr!4v1708965381794!5m2!1sen!2sfr" width="100%" height="220px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p style="color:black; font-size:16px!important; margin-top:2px!important;">📍 <%= t('confirm_mail.address') %> Utopy <%= @booking.hostel.name %>: <a href="https://maps.app.goo.gl/THTgoosNeSJXfeGg7"><%= @booking.hostel.address %></a></p>
+    <a href="https://maps.app.goo.gl/THTgoosNeSJXfeGg7">
+      <%= image_tag "garden_email_map"%>
+    </a>
   <% end %>
 </div>

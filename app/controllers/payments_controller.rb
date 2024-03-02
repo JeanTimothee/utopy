@@ -33,7 +33,7 @@ class PaymentsController < ApplicationController
 
   def cancel
     @booking.destroy
-    flash[:alert] = "Payment cancelled"
+    flash[:alert] = t('flash.cancel_payment')
     redirect_to root_path
   end
 

@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   scope '(:locale)', locale: /en/ do
+    root to: "pages#home"
 
     get '/politique-de-confidentialite', to: 'pages#politique', as: 'politique'
     get '/mentions-legales', to: 'pages#mentions', as: 'mentions'
+    post '/contact', to: 'pages#contact', as: 'contact'
 
-    root to: "pages#home"
     resources :hostels, only: [:show] do
       get 'booked_dates', on: :member, defaults: { format: :json }
       get 'calculate', on: :member, defaults: { format: :json }

@@ -41,7 +41,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
 
-    flash[:alert] = "Booking cancelled"
+    flash[:alert] = t('flash.cancel_booking')
     redirect_to root_path, status: :see_other
   end
 

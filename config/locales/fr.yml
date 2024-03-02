@@ -164,3 +164,7 @@ fr:
     text_5: "Si vous avez des questions n'hésitez pas à nous envoyer un message."
     bye: "L'équipe Utopy Hostel "
     address: "Adresse"
+  flash:
+    contact_mail: "Message envoyé ! 😊"
+    cancel_payment: "Paiement annulé !"
+    cancel_booking: "Réservation annulée !"

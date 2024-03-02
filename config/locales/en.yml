@@ -164,3 +164,7 @@ en:
     text_5: "If you have any questions, don't hesitate to send us a message."
     bye: "The Utopy Hostel team "
     address: "Address"
+  flash:
+    contact_mail: "Message sent! 😊"
+    cancel_payment: "Payment cancelled!"
+    cancel_booking: "Booking cancelled!"

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :politique, :mentions ]
+  skip_before_action :authenticate_user!, only: [ :home, :politique, :mentions, :contact ]
 
   def home
     @hostels = Hostel.all
@@ -14,9 +14,16 @@ class PagesController < ApplicationController
     end
   end
 
+  def contact
+    ContactMailer.with(email: params[:email], name: params[:name], message: params[:message]).contact_email.deliver_later
+    flash[:notice] = t('flash.contact_mail')
+    redirect_to root_path
+  end
+
   def politique
   end
 
   def mentions
   end
+
 end

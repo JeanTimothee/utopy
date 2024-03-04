@@ -16,8 +16,8 @@ class PaymentsController < ApplicationController
     @booking.status = "confirmed"
     @booking.save!
 
-    ContactMailer.with(booking: @booking).confirmation_email.deliver_later
-    ContactMailer.with(booking: @booking).staff_email.deliver_later
+    ContactMailer.with(booking: @booking).confirmation_email.deliver_now
+    ContactMailer.with(booking: @booking).staff_email.deliver_now
 
     format = ( params[:locale] == "en" ? "%Y/%m/%d": "%d/%m/%Y" )
 

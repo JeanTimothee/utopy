@@ -17,7 +17,7 @@ class ContactMailer < ApplicationMailer
     @email = params[:email]
     @name = params[:name]
     @message = params[:message]
-    mail(to: 'utopy.hostel@gmail.com', subject: "Message from #{@name} on website")
+    mail(to: 'registimothee@gmail.com', subject: "Message from #{@name} on website")
   end
 
   # private

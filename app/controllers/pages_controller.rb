@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def contact
-    ContactMailer.with(email: params[:email], name: params[:name], message: params[:message]).contact_email.deliver_later
+    ContactMailer.with(email: params[:email], name: params[:name], message: params[:message]).contact_email.deliver_now
     flash[:notice] = t('flash.contact_mail')
     redirect_to root_path
   end

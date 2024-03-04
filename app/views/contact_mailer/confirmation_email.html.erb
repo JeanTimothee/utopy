@@ -1,7 +1,7 @@
 <% format = (params[:locale] == "en" ? '%Y/%m/%d' : '%d/%m/%Y') %>
 
 <div class="container" style="width: 90%; margin: auto;">
-  <%= image_tag "#{@booking.hostel.name.downcase}_email", style:"width: 100%;" %>
+  <%= image_tag "#{@booking.hostel.name.downcase}_email.png", style:"width: 100%;" %>
   <h1 style="color:black;"><%= t('confirm_mail.text_0') %></h1>
   <p style="color:black; font-size: 20px;"><%= t('confirm_mail.text_1.text') %> <%= t('confirm_mail.text_1.bunk', count: @booking.number_of_beds) %> <strong class="<%= @booking.hostel.name.downcase %>-color" ><%= @booking.hostel.name.upcase %></strong> <%= t('confirm_mail.text_1.from') %> <strong><%= @booking.start_date.strftime(format) %></strong> <%= t('confirm_mail.text_1.from') %> <strong><%= @booking.end_date.strftime(format) %></strong>.</p>
   <p style="color:black; font-style: italic; font-size:16px!important"><%= t('confirm_mail.text_2') %></p>
@@ -18,12 +18,12 @@
   <% if @booking.hostel.name == "Coast" %>
     <p style="color:black; font-size:16px!important; margin-top:2px!important;">📍 <%= t('confirm_mail.address') %> Utopy <%= @booking.hostel.name %>: <a href="https://maps.app.goo.gl/AEdC5AbtDvvA8jcZA"><%= @booking.hostel.address %></a></p>
     <a href="https://maps.app.goo.gl/AEdC5AbtDvvA8jcZA">
-      <%= image_tag "coast_email_map"%>
+      <%= image_tag "coast_email_map.png"%>
     </a>
   <% else %>
     <p style="color:black; font-size:16px!important; margin-top:2px!important;">📍 <%= t('confirm_mail.address') %> Utopy <%= @booking.hostel.name %>: <a href="https://maps.app.goo.gl/THTgoosNeSJXfeGg7"><%= @booking.hostel.address %></a></p>
     <a href="https://maps.app.goo.gl/THTgoosNeSJXfeGg7">
-      <%= image_tag "garden_email_map"%>
+      <%= image_tag "garden_email_map.png"%>
     </a>
   <% end %>
 </div>

@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
 
   scope '(:locale)', locale: /en/ do
     root to: "pages#home"
+
+    devise_for :users
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
     get '/politique-de-confidentialite', to: 'pages#politique', as: 'politique'
     get '/mentions-legales', to: 'pages#mentions', as: 'mentions'

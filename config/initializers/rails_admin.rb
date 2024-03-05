@@ -5,6 +5,11 @@ RailsAdmin.config do |config|
 
   ## == Devise ==
   config.authenticate_with do
+    default_locale = :np  # Set your default locale here
+
+    # Set the locale per request
+    I18n.locale = params[:locale] || default_locale
+
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)

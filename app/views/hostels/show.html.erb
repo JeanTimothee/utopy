@@ -1,24 +1,22 @@
 <div id="hostel" class="<%= @hostel.name.downcase %>-background">
   <h1><%= @hostel.name.upcase %></h1>
   <div class="banner-show">
-    <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_banner" %>
+    <%= image_tag "#{@hostel.name.downcase}_banner" %>
   </div>
   <div class="container cards">
     <div class="col45">
       <div class="amenities-card">
         <div class="d-flex justify-content-between">
           <div class="col-5">
-            <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_bedroom_1", class:"photo" %>
+            <%= image_tag "#{@hostel.name.downcase}_bedroom_1", class:"photo" %>
           </div>
           <div class="col-6 d-flex flex-column justify-content-around">
             <h3><%= t('show.title_1') %></h3>
             <div class="icons d-flex flex-column justify-content-around">
               <div class="d-flex justify-content-between align-items-center">
-                <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
                 <i class="fa-solid fa-bed col-3"></i>
                 <i class="fa-regular fa-lightbulb col-3"></i>
                 <i class="fa-solid fa-box-archive col-3"></i>
-                <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
               </div>
               <div class="d-flex justify-content-around align-items-center">
                 <% if @hostel.name == "Garden" %>
@@ -45,10 +43,8 @@
 
               <% if @hostel.name == "Coast" %>
                 <div class="d-flex justify-content-around align-items-center">
-                  <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
                   <i class="fa-solid fa-kitchen-set col-3"></i>
                   <i class="fa-solid fa-couch col-3"></i>
-                  <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
                 </div>
                 <div class="d-flex justify-content-around align-items-center">
                   <i class="fa-solid fa-shower col-3"></i>
@@ -56,23 +52,20 @@
                 </div>
               <% else %>
                 <div class="d-flex justify-content-between align-items-center">
-                  <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
                   <i class="fa-solid fa-kitchen-set col-3"></i>
                   <i class="fa-solid fa-couch col-3"></i>
                   <i class="fa-solid fa-shower col-3"></i>
-                  <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
                 </div>
                 <div class="d-flex justify-content-around align-items-center">
                   <i class="fa-solid fa-wifi col-3"></i>
-                  <%= cl_image_tag 'Utopy/picnic', class:'col-3 picnic' %>
-                  <%# <i class="fa-solid fa-umbrella-beach col-3"></i> %>
+                  <%= image_tag 'picnic', class:'col-3 picnic' %>
                 </div>
               <% end %>
 
             </div>
           </div>
           <div class="col-5">
-            <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_kitchen", class:"photo" %>
+            <%= image_tag "#{@hostel.name.downcase}_kitchen", class:"photo" %>
           </div>
         </div>
         <% if @hostel.name == "Garden" %>
@@ -84,13 +77,12 @@
       <div class="amenities-card">
         <div class="d-flex justify-content-between">
           <div class="col-5">
-            <%= cl_image_tag "Utopy/#{@hostel.name.downcase}_proximity", class:"photo" %>
+            <%= image_tag "#{@hostel.name.downcase}_proximity", class:"photo" %>
           </div>
           <div class="col-6 d-flex flex-column justify-content-around">
             <h3><%= t('show.title_3') %></h3>
             <div class="icons d-flex flex-column justify-content-around">
               <div class="d-flex justify-content-between align-items-center">
-                <%# <%= cl_image_tag 'bUtopy/unk-bed', class:'col-3' %>
                 <% if @hostel.name == "Garden" %>
                   <i class="fa-solid fa-cart-shopping col-3"></i>
                   <i class="fa-solid fa-utensils col-3"></i>
@@ -100,7 +92,6 @@
                   <i class="fa-solid fa-utensils col-3"></i>
                   <i class="fa-solid fa-cookie-bite col-3"></i>
                 <% end %>
-                <%# <%= cl_image_tag 'lUtopy/ockers', class:'col-3' %>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <% if @hostel.name == "Garden" %>

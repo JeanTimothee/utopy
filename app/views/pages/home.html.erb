@@ -1,6 +1,5 @@
 <section id="video-container">
-  <%# 'Utopy/teaser.mp4' %>
-  <%= cl_video_tag "UTOPY_HOSTEL_HD", loop:true, autoplay: true, muted:true, audio_codec: "none", quality: 100 %>
+  <%= cl_video_tag "UTOPY_HOSTEL_HD", loop:true, autoplay: true, muted:true, audio_codec: "none", quality: 50 %>
   <%= link_to '#accueil' do %>
     <i class="fa-solid fa-chevron-down fa-fade"></i>
   <% end %>
@@ -25,14 +24,14 @@
 </div>
 <section id="hostels" class="pt-4 container">
   <div class="coast col-sm-5">
-    <%= cl_image_tag 'Utopy/coast_full', class:'w-100 img-banner' %>
+    <%= image_tag 'coast_full', class:'w-100 img-banner' %>
     <div class="coast-background content container pb-4">
-      <%= cl_image_tag 'Utopy/coast_banner', class:'w-100 pb-2 banner-1' %>
+      <%= image_tag 'coast_banner', class:'w-100 pb-2 banner-1' %>
       <div class="hostel-mosaic d-flex justify-between">
-        <%= cl_image_tag 'Utopy/coast_bedroom_1', class:'w-50 pe-1' %>
+        <%= image_tag 'coast_bedroom_1', class:'w-50 pe-1' %>
         <div class="hostel-mosaic-right w-50 ps-1">
-          <%= cl_image_tag 'Utopy/coast_banner_2', class:'w-100 pb-1' %>
-          <%= cl_image_tag 'Utopy/coast_bathroom_1', class:'w-100 pt-1' %>
+          <%= image_tag 'coast_banner_2', class:'w-100 pb-1' %>
+          <%= image_tag 'coast_bathroom_1', class:'w-100 pt-1' %>
         </div>
       </div>
       <div class="text-hostel my-4 d-flex align-items-center">
@@ -44,14 +43,14 @@
     </div>
   </div>
     <div class="garden col-sm-5">
-    <%= cl_image_tag 'Utopy/garden_full', class:'w-100 img-banner' %>
+    <%= image_tag 'garden_full', class:'w-100 img-banner' %>
     <div class="garden-background content container pb-4">
-      <%= cl_image_tag 'Utopy/garden_banner', class:'w-100 pb-2 banner-1' %>
+      <%= image_tag 'garden_banner', class:'w-100 pb-2 banner-1' %>
       <div class="hostel-mosaic d-flex justify-between">
-        <%= cl_image_tag 'Utopy/garden_bedroom_1', class:'w-50 pe-1' %>
+        <%= image_tag 'garden_bedroom_1', class:'w-50 pe-1' %>
         <div class="hostel-mosaic-right w-50 ps-1">
-          <%= cl_image_tag 'Utopy/garden_banner_2', class:'w-100 pb-1' %>
-          <%= cl_image_tag 'Utopy/garden_bathroom_1', class:'w-100 pt-1' %>
+          <%= image_tag 'garden_banner_2', class:'w-100 pb-1' %>
+          <%= image_tag 'garden_bathroom_1', class:'w-100 pt-1' %>
         </div>
       </div>
       <div class="text-hostel my-4 d-flex align-items-center">
@@ -105,12 +104,12 @@
 
       <h1 class="title-home"><%= t('home.title_3') %></h1>
       <p><%= t('home.text_2_html') %></p>
-      <%= cl_image_tag 'Utopy/about', class:'w-100 mt-2 mb-4' %>
+      <%= image_tag 'about', class:'w-100 mt-2 mb-4' %>
       <p><%= t('home.text_2_2_html') %></p>
       <div>
         <div class="d-flex align-items-center mb-4">
           <p class="col-7 mb-0"><%= t('home.title_3_2_html') %></p>
-          <%= cl_image_tag 'Utopy/meeting_place', class:'col-5' %>
+          <%= image_tag 'meeting_place', class:'col-5' %>
         </div>
         <p class="m-0 pb-5"><%= t('home.text_2_3') %>
         </p>
@@ -133,11 +132,11 @@
           <p><%= t('home.text_2_html') %></p>
           <p><%= t('home.text_2_2_html') %></p>
         </div>
-        <%= cl_image_tag 'Utopy/about', class:'col-5 img-about' %>
+        <%= image_tag 'about', class:'col-5 img-about' %>
       </div>
       <div>
         <div class="d-flex justify-content-between">
-          <%= cl_image_tag 'Utopy/meeting_place', class:'col-5' %>
+          <%= image_tag 'meeting_place', class:'col-5' %>
           <div class="col-5 d-flex flex-column justify-content-around">
             <p class="mb-0"><%= t('home.title_3_2_html') %></p>
             <p class="m-0 pb-5"><%= t('home.text_2_3') %>

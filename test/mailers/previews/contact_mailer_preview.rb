@@ -8,7 +8,6 @@ class ContactMailerPreview < ActionMailer::Preview
     @booking = Booking.first
     @booking.total_price_cents = 4400
     ContactMailer.with(user: User.first, booking: @booking).staff_email
-    # mail(to: @booking.contact.email, subject: "Booking #{@booking.hostel.name} Utopy Hostel")
   end
 
   def contact_email

@@ -1,5 +1,5 @@
-<section id="video-container">
-  <%= cl_video_tag "UTOPY_HOSTEL_HD", loop:true, autoplay: true, muted:true, audio_codec: "none", quality: 50 %>
+<section id="video-container" data-controller="video">
+  <%= cl_video_tag "UTOPY_HOSTEL_HD", poster: "https://res.cloudinary.com/timothee/image/upload/v1709891022/garden_banner_ku7kjj.jpg", loop:true, autoplay: true, muted:true, audio_codec: "none", quality: 50 %>
   <%= link_to '#accueil' do %>
     <i class="fa-solid fa-chevron-down fa-fade"></i>
   <% end %>

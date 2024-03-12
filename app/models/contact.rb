@@ -4,7 +4,7 @@ class Contact < ApplicationRecord
   validates :birthdate, :email, :first_name, :last_name, :phone, :country, presence: true
   validate :birthdate_at_least_18_years_ago
   validate :valid_email_format
-  validate :valid_phone_format
+  # validate :valid_phone_format
 
   private
 

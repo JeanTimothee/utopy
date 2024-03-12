@@ -6,10 +6,18 @@
   }
 
   #booking-desktop {
-    height: 49vh;
+    min-height: 48vh;
+    max-height: fit-content;
     background-color: $white;
-    position: sticky;
-    top: 50vh;
+    position: fixed;
+    position: -webkit-sticky;
+    bottom: 15px;
+    padding: 12px 8px 4px 8px;
+    width: 252.83px;
+  }
+
+  .flatpickr-calendar {
+    transform: scale(0.9);
   }
 
   .col45 {
@@ -47,12 +55,35 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    min-height: 46vh;
   }
 
   .top-form {
     margin-top: 2rem;
-    width: 80%;
+    width: 90%;
     margin: auto;
+  }
+
+  .contact_first_name, .contact_birthdate, .contact_last_name, .contact_email, .contact_phone, .contact_country {
+    width: 45%;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  #booking-desktop {
+    width: 341.03px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #booking-desktop {
+    width: 458.63px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #booking-desktop {
+    width: 635.03px;
   }
 }

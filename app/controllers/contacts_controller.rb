@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.booking = @booking
 
-    if @contact.save!
+    if @contact.save
 
       session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],

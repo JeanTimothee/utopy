@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
   def create
     @number_of_beds = params[:booking][:number_of_beds]
     @booking = Booking.new()
-    if params[:booking][:start_date].present?
+    if params[:booking][:start_date].present? && params[:booking][:start_date].split(' to ').count == 2
       start_date = Date.parse(params[:booking][:start_date].split(' to ')[0])
       end_date = Date.parse(params[:booking][:start_date].split(' to ')[1])
       @booking = Booking.new(start_date: start_date, end_date: end_date, number_of_beds: @number_of_beds.to_i)
@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
       @booking.total_price_cents = @booking.calculate_price
     end
 
-    if (@hostel.available_beds(@booking.start_date, @booking.end_date).count >= @booking.number_of_beds.to_i) && @booking.save!
+    if (@hostel.available_beds(@booking.start_date, @booking.end_date).count >= @booking.number_of_beds.to_i) && @booking.save
       @hostel.available_beds(@booking.start_date, @booking.end_date).sample(@booking.number_of_beds).each do |bed|
         beds_booking = BedsBooking.new()
         beds_booking.bed = bed
@@ -22,6 +22,7 @@ class BookingsController < ApplicationController
       end
       redirect_to hostel_path(@hostel, booking: @booking.id)
     else
+      @booked_dates = @hostel.booked_dates
       render 'hostels/show', status: :unprocessable_entity
     end
   end

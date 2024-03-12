@@ -6,9 +6,11 @@ Rails.application.routes.draw do
     devise_for :users
     mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+    get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
     get '/politique-de-confidentialite', to: 'pages#politique', as: 'politique'
     get '/mentions-legales', to: 'pages#mentions', as: 'mentions'
     post '/contact', to: 'pages#contact', as: 'contact'
+    post '/block_beds', to: 'bookings#block_beds', as: 'block_beds'
 
     resources :hostels, only: [:show] do
       get 'booked_dates', on: :member, defaults: { format: :json }

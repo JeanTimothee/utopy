@@ -40,7 +40,12 @@ export default class extends Controller {
     flatpickr(this.startDateTarget, {
       mode: "range",
       inline: true,
-      disable: bookedDates
+      minDate: new Date(),
+      disable: bookedDates,
+      width: '100%',
+      "locale": {
+        "firstDayOfWeek": 1 // start week on Monday
+    }
       // onChange: (selectedDates) => {
       //   // Handle date change, if needed
       // },

@@ -1,0 +1,28 @@
+<div class="container pt-5">
+  <div class="d-flex justify-content-between">
+  <% @hostels.each do |hostel| %>
+    <% @booked_dates = hostel.name == "Garden" ? @garden_booked_dates : @coast_booked_dates %>
+    <%= simple_form_for [hostel, @booking], url: block_beds_path(hostel_id: hostel.id), turbo_method:"POST", data: { controller: "datepicker", datepicker_booked_value: @booked_dates.to_json, datepicker_hostel_value: hostel.id } do |f| %>
+      <div class="d-flex">
+        <%= f.input :start_date,
+          as: :string,
+          label: false,
+          input_html: {
+            class: 'd-none',
+            data: {
+              datepicker_target: "startDate",
+              action: "change->datepicker#calculate",
+              hostel_id: hostel.id
+            }
+          }
+        %>
+        <div class="d-flex flex-column justify-content-around inputs-right">
+          <h3 class="d-none" data-datepicker-target="price"><strong>0 €</strong></h3>
+          <%= f.input :number_of_beds, as: :select, collection: (1..15), selected: 1, wrapper_html: { class: "text-center d-flex flex-column justify-content-between" }, input_html: { data: { datepicker_target: "numberOfBeds", action: "change->datepicker#updateDatepicker" }} %>
+          <%= f.button :submit, "Book #{hostel.name.upcase}", class:"book-btn-modal #{hostel.name.downcase}-background" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>

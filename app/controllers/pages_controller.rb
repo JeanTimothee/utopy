@@ -26,4 +26,11 @@ class PagesController < ApplicationController
   def mentions
   end
 
+  def dashboard
+    @hostels = Hostel.all
+    @garden_booked_dates = Hostel.find_by(name:"Garden").booked_dates
+    @coast_booked_dates = Hostel.find_by(name:"Coast").booked_dates
+    @booking = Booking.new()
+  end
+
 end

@@ -24,7 +24,7 @@ class Hostel < ApplicationRecord
   end
 
   def booked_dates(number_of_beds = 1)
-    self.nb_of_bookings_per_dates.select { |key, value| value >= (16 - number_of_beds) }.keys +=
+    self.nb_of_bookings_per_dates.select { |key, value| value >= (16 - number_of_beds) }.keys
   end
 
   def nb_of_bookings_per_dates

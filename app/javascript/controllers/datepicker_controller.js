@@ -12,10 +12,18 @@ export default class extends Controller {
   initializeDatepicker() {
     const bookedDates = this.bookedValue;
 
+    if (new Date().getHours() >= 16) {
+      const currentDate = new Date()
+      this.minDate = currentDate.setDate(currentDate.getDate() + 1)
+    } else {
+      this.minDate = new Date();
+    }
+
     flatpickr(this.startDateTarget, {
       mode: "range",
       inline: true,
-      minDate: new Date(),
+      minDate: this.minDate,
+      maxDate: new Date(2024,11,2),
       disable: bookedDates,
       width: '100%',
       "locale": {

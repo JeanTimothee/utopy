@@ -7,9 +7,10 @@
 puts '-------------------------'
 puts 'Creating users...'
 
-tim = User.create!(email: 'tim@gmail.com', password:'123456', admin: true)
-gladys = User.create!(email: 'gladys@gmail.com', password:'123456', admin: true)
-pauline = User.create!(email: 'pauline@gmail.com', password:'123456', admin: true)
+tim = User.create!(email: 'registimothee@gmail.com', password:'123456', admin: true)
+# gladys = User.create!(email: 'gladys@gmail.com', password:'123456', admin: true)
+# pauline = User.create!(email: 'pauline@gmail.com', password:'123456', admin: true)
+utopy = User.create!(email: 'utopy.hostel@gmail.com', password:'utopy64123456', admin: true)
 
 puts "#{User.count} users created!"
 

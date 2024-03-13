@@ -1,12 +1,14 @@
 <section id="video-container" data-controller="video">
-  <%= cl_video_tag "UTOPY_HOSTEL_HD",
-    poster: "https://res.cloudinary.com/timothee/image/upload/v1709891022/garden_banner_ku7kjj.jpg",
+  <%= video_tag "video_utopy.mp4",
+    poster: asset_path('garden_banner.jpg'),
     loop:true,
     autoplay:true,
     muted:true,
     audio_codec: "none",
     quality: 50,
-    playsinline:true %>
+    playsinline:true
+  %>
+
   <%= link_to '#accueil' do %>
     <i class="fa-solid fa-chevron-down fa-fade"></i>
   <% end %>

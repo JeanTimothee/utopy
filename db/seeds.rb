@@ -7,6 +7,8 @@
 puts '-------------------------'
 puts 'Creating users...'
 
+User.destroy_all
+
 tim = User.create!(email: 'registimothee@gmail.com', password:'123456', admin: true)
 # gladys = User.create!(email: 'gladys@gmail.com', password:'123456', admin: true)
 # pauline = User.create!(email: 'pauline@gmail.com', password:'123456', admin: true)

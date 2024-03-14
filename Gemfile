@@ -32,9 +32,6 @@ gem "redis", ">= 4.0.1"
 # geocode/mapbox
 gem "geocoder"
 
-# Cloudinary
-gem "cloudinary"
-
 gem "pry-byebug"
 
 # Admin

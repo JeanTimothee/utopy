@@ -58,6 +58,7 @@ class BookingsController < ApplicationController
       }
       redirect_to dashboard_path
     else
+      flash[:notice] = "Booking not ok"
       @booked_dates = @hostel.booked_dates
       render 'dashboard', status: :unprocessable_entity
     end

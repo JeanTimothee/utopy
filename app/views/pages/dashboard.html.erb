@@ -1,5 +1,5 @@
-<div class="container pt-5">
-  <div class="d-flex justify-content-between">
+<div id="dashboard" class="container pt-5">
+  <div class="d-flex justify-content-around">
   <% @hostels.each do |hostel| %>
     <% @booked_dates = hostel.name == "Garden" ? @garden_booked_dates : @coast_booked_dates %>
     <%= simple_form_for [hostel, @booking], url: block_beds_path(hostel_id: hostel.id), turbo_method:"POST", data: { controller: "datepicker", datepicker_booked_value: @booked_dates.to_json, datepicker_hostel_value: hostel.id } do |f| %>

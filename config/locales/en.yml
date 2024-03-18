@@ -240,3 +240,4 @@ en:
       create: Create %{model}
       submit: Save %{model}
       update: Update %{model}
+  before_16: "is today, booking must be done before 16:00"

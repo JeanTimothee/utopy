@@ -6,19 +6,12 @@ export default class extends Controller {
   static values = {booked: Array, hostel: String}
 
   connect() {
+    this.minDate = this.checkTime();
     this.initializeDatepicker();
   }
 
   initializeDatepicker() {
     const bookedDates = this.bookedValue;
-
-    if (new Date().getHours() >= 16) {
-      const currentDate = new Date()
-      this.minDate = currentDate.setDate(currentDate.getDate() + 1)
-    } else {
-      this.minDate = new Date();
-    }
-
     flatpickr(this.startDateTarget, {
       mode: "range",
       inline: true,
@@ -45,10 +38,11 @@ export default class extends Controller {
   }
 
   updateDisabledDates(bookedDates) {
+    console.log('update');
     flatpickr(this.startDateTarget, {
       mode: "range",
       inline: true,
-      minDate: new Date(),
+      minDate: this.minDate,
       disable: bookedDates,
       width: '100%',
       "locale": {
@@ -74,6 +68,15 @@ export default class extends Controller {
         });
     } else {
       this.priceTarget.innerHTML = `<strong>0 €</strong>`
+    }
+  }
+
+  checkTime() {
+    if (new Date().getHours() >= 16) {
+      const currentDate = new Date()
+      return currentDate.setDate(currentDate.getDate() + 1)
+    } else {
+      return new Date();
     }
   }
 }

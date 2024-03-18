@@ -62,9 +62,10 @@ class Booking < ApplicationRecord
 
   private
 
+  # handle in JS datepicker controller as well
   def before_4_pm
     if start_date == Date.today && Time.now.hour >= 16
-      errors.add(:start_date, "must be before 16:00 today")
+      errors.add(:start_date, (I18n.t 'before_16'))
     end
   end
 

@@ -21,7 +21,7 @@ class Hostel < ApplicationRecord
   end
 
   def nb_of_bookings_per_dates
-    dates = Booking.joins(:hostel).where("status = ? AND end_date > ? AND hostels.id = ?", "confirmed", Date.today, self.id).flat_map { |b| (b.start_date..b.end_date).to_a * b.all_beds.count }
+    dates = Booking.joins(:hostel).where("status = ? AND end_date > ? AND hostels.id = ?", "confirmed", Date.today, self.id).flat_map { |b| (b.start_date..(b.end_date - 1)).to_a * b.all_beds.count }
     dates.group_by(&:itself).transform_values(&:count)
   end
 end

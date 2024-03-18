@@ -238,3 +238,4 @@ fr:
       create: Créer un(e) %{model}
       submit: Enregistrer ce(tte) %{model}
       update: Modifier ce(tte) %{model}
+  before_16: "ce jour, la réservation doit être faite avant 16:00"

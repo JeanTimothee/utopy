@@ -1,5 +1,7 @@
-<div id="dashboard" class="container pt-5">
-  <div class="block-dates d-flex justify-content-around">
+<div id="dashboard" class="container" data-controller="tabs">
+  <div class="w-100">
+    <h3 class="open-tab" data-action='click->tabs#open' data-tabs-id-param="1">Bloquer Dates <i class="fa-solid fa-chevron-down"></i></h3>
+    <div data-tabs-target="block" class="d-none block-dates justify-content-around">
     <% @hostels.each do |hostel| %>
       <% @booked_dates = hostel.name == "Garden" ? @garden_booked_dates : @coast_booked_dates %>
       <%= simple_form_for [hostel, @booking], url: block_beds_path(hostel_id: hostel.id), turbo_method:"POST", data: { controller: "datepicker", datepicker_booked_value: @booked_dates.to_json, datepicker_hostel_value: hostel.id } do |f| %>
@@ -24,23 +26,35 @@
         </div>
       <% end %>
     <% end %>
-  </div>
-  <div class="dispo">
-    <%= simple_form_for [Hostel.first, Booking.new], url: '', turbo_method:"POST", data: { controller: "dispo" } do |f| %>
-        <div class="d-flex">
-          <%= f.input :start_date,
-            as: :string,
-            label: false,
-            input_html: {
-              class: 'd-none',
-              data: {
-                datepicker_target: "date",
-                action: "change->dispo#display",
-              }
-            }
-          %>
-          <%= f.association :hostel %>
-        </div>
-      <% end %>
+    </div>
+    <h3 class="open-tab open-tab-2" data-action='click->tabs#open' data-tabs-id-param="2">Checker Dispo <i class="fa-solid fa-chevron-down"></i></h3>
+    <div data-tabs-target="dispo" class="d-none dispo">
+      <div data-controller="dispo">
+        <%= simple_form_for Booking.new, url: dispo_path, turbo_method: "POST", data: { dispo_target: "form" } do |f| %>
+          <div class="d-flex justify-content-around">
+            <%= f.input :start_date,
+              as: :string,
+              label: false,
+              input_html: {
+                class: 'd-none',
+                data: {
+                  dispo_target: "date",
+                  action: "change->dispo#displayDispo",
+                }
+              } %>
+            <div class="hostel-dispo d-flex flex-column justify-content-around">
+              <%= f.association :hostel,
+                input_html: {
+                  data: {
+                    dispo_target: "hostel",
+                    action: "change->dispo#displayDispo",
+                  }
+              } %>
+              <h3 data-dispo-target="results" class="text-center"></h3>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

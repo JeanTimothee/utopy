@@ -32,6 +32,8 @@ gem "redis", ">= 4.0.1"
 # geocode/mapbox
 gem "geocoder"
 
+gem 'devise-i18n'
+
 gem "pry-byebug"
 
 # Admin

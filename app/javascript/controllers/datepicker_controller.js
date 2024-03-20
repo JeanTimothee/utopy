@@ -38,19 +38,16 @@ export default class extends Controller {
   }
 
   updateDisabledDates(bookedDates) {
-    console.log('update');
     flatpickr(this.startDateTarget, {
       mode: "range",
       inline: true,
       minDate: this.minDate,
+      maxDate: new Date(2024,11,2),
       disable: bookedDates,
       width: '100%',
       "locale": {
         "firstDayOfWeek": 1 // start week on Monday
-    }
-      // onChange: (selectedDates) => {
-      //   // Handle date change, if needed
-      // },
+      }
     });
     this.calculate();
   }

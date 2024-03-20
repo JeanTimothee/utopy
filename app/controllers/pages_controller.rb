@@ -27,10 +27,19 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @dispo = params[:dispo] if params[:dispo].present?
     @hostels = Hostel.all
     @garden_booked_dates = Hostel.find_by(name:"Garden").booked_dates
     @coast_booked_dates = Hostel.find_by(name:"Coast").booked_dates
     @booking = Booking.new()
   end
 
+  def dispo
+    puts params[:start_date]
+    @dispo =  (15 - (Hostel.find(params[:booking][:hostel_id]).nb_of_bookings_per_dates[Date.parse(params[:booking][:start_date])] || 0))
+    respond_to do |format|
+      format.html { redirect_to dashboard_path(dispo: @dispo) }
+      format.json { render json: { dispo: @dispo } }
+    end
+  end
 end

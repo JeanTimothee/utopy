@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get '/mentions-legales', to: 'pages#mentions', as: 'mentions'
     post '/contact', to: 'pages#contact', as: 'contact'
     post '/block_beds', to: 'bookings#block_beds', as: 'block_beds'
+    post '/dispo', to: 'pages#dispo', as: 'dispo'
 
     resources :hostels, only: [:show] do
       get 'booked_dates', on: :member, defaults: { format: :json }

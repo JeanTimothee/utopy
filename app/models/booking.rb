@@ -71,7 +71,7 @@ class Booking < ApplicationRecord
 
   def no_overlapping_bookings
     all_beds.each do |bed|
-      overlapping_bookings = bed.bookings.where("start_date < ? AND end_date > ? OR start_date >= ? AND end_date <= ?", end_date, start_date, start_date, end_date)
+      overlapping_bookings = bed.bookings.where("status = ? AND start_date < ? AND end_date > ? OR start_date >= ? AND end_date <= ?", "confirmed", end_date, start_date, start_date, end_date)
 
       if overlapping_bookings.exists? && overlapping_bookings.first != self
         errors.add(:base, "Bed #{bed.number} is already booked for the selected dates")

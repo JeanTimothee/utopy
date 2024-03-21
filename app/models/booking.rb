@@ -4,9 +4,9 @@ class Booking < ApplicationRecord
   has_many :beds_bookings, dependent: :destroy
   has_many :beds, through: :beds_bookings
 
-  validate :no_overlapping_bookings
-  validate :end_date_after_start_date
-  validate :before_4_pm
+  validate :no_overlapping_bookings, on: :create
+  validate :end_date_after_start_date, on: :create
+  validate :before_4_pm, on: :create
 
   validates :start_date, :end_date, presence: true
   validates :status, inclusion: { in: %w(pending confirmed) }

@@ -26,7 +26,7 @@ class ContactsController < ApplicationController
       )
 
 
-    @booking.checkout_session_id = session.id
+    @booking.checkout_session_id = session.id.to_s
     @booking.save
 
     redirect_to new_booking_payment_path(@booking)

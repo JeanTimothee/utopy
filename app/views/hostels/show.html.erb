@@ -1,3 +1,6 @@
+<% content_for :meta_title, "Utopy #{@hostel.name} hostel - Biarritz" %>
+<% content_for :meta_description, t('meta.' + @hostel.name.downcase + '_description') %>
+
 <div id="hostel" class="<%= @hostel.name.downcase %>-background">
   <h1><%= @hostel.name.upcase %></h1>
   <div class="banner-show">

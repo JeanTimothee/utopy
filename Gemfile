@@ -34,6 +34,8 @@ gem "geocoder"
 
 gem 'devise-i18n'
 
+gem "countries"
+
 gem "pry-byebug"
 
 # Admin

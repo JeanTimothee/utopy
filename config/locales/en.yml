@@ -304,3 +304,7 @@ en:
   support:
     array:
       words_connector: "and"
+  meta:
+    description: "Welcome to Utopy hostel in Biarritz. Affordable accommodation, perfect for travelling surfers and backpackers. Book now cheap dormitory beds!"
+    garden_description: "Utopy Garden hostel in Biarritz, chill accommodation with a garden, perfect for travelling surfers and backpackers. Book now cheap dormitory beds with your friends!"
+    coast_description: "Utopy Coast hostel, near the beach in the center of Biarritz, perfect for travelling surfers and backpackers. Book now cheap dormitory beds with your friends!"

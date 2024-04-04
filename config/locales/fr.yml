@@ -303,3 +303,7 @@ fr:
   support:
       array:
         words_connector: "et"
+  meta:
+    description: "Bienvenue à Utopy hostel, l'auberge de jeunesse à Biarritz. Hébergement pas cher, parfait pour les surfeurs et les backpackers. Réservez dès maintenant!"
+    garden_description: "Utopy Garden hostel, l'auberge de jeunesse chill avec jardin à Biarritz. Hébergement partagé pas cher, parfait pour les surfeurs et les backpackers relax."
+    coast_description: "Utopy Coast hostel, l'auberge de jeunesse proche de la plage dans le centre ville de  Biarritz. Hébergement partagé pas cher, parfait pour surfeurs et backpackers."

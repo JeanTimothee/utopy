@@ -7,6 +7,13 @@ class BookingsController < ApplicationController
     @booking = Booking.new()
     if params[:booking][:start_date].present? && params[:booking][:start_date].split(' to ').count == 2
       start_date = Date.parse(params[:booking][:start_date].split(' to ')[0])
+
+      # double security if user use the same web page several days after the booking.new
+      if start_date < Date.today
+        @booking.destroy
+        redirect_to hostel_path(@hostel)
+      end
+
       end_date = Date.parse(params[:booking][:start_date].split(' to ')[1])
       @booking = Booking.new(start_date: start_date, end_date: end_date, number_of_beds: @number_of_beds.to_i)
       @booking.hostel = @hostel

@@ -47,11 +47,11 @@ class Booking < ApplicationRecord
         pricing.march
       when (Date.new(date.year,4,1)..Date.new(date.year,4,30))
         pricing.april
-      when (Date.new(date.year,5,1)..Date.new(date.year,5,31)) || (Date.new(date.year,10,1)..pricing.hostel.closing)
+      when (Date.new(date.year,5,1)..Date.new(date.year,5,31)), (Date.new(date.year,10,1)..pricing.hostel.closing)
         pricing.may_october
-      when (Date.new(date.year,6,1)..Date.new(date.year,6,30)) || (Date.new(date.year,9,1)..Date.new(date.year,9,30))
+      when (Date.new(date.year,6,1)..Date.new(date.year,6,30)), (Date.new(date.year,9,1)..Date.new(date.year,9,30))
         pricing.june_september
-      when (Date.new(date.year,7,1)..Date.new(date.year,7,8)) || (Date.new(date.year,7,16)..Date.new(date.year,8,13)) || (Date.new(date.year,8,19)..Date.new(date.year,8,31))
+      when (Date.new(date.year,7,1)..Date.new(date.year,7,8)), (Date.new(date.year,7,15)..Date.new(date.year,8,13)), (Date.new(date.year,8,19)..Date.new(date.year,8,31))
         pricing.summer
       else
         pricing.special_weekends

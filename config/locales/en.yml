@@ -26,6 +26,7 @@ en:
     text_4_3: "Cancellation free of charge: 5 days before your arrival date"
     text_4_4: "Make sure you get the best prices by booking here!"
     text_4_5: "Book your surf lessons directly at reception and benefit from discounted rates with our partner Jo Moraiz Surf School."
+    text_4_6: "Minors are not allowed in our premises."
     taxes: "Taxes and charges included"
     coast:
       text_1: "Discover our 15-person mixed dormitory offering a social, comfortable and economical travel experience. Our box beds create a spacious personal cocoon equipped with storage, lamp, plug, fan and individual curtains. A perfect blend of privacy and conviviality for a restorative rest. Bed linen is included, and lockers are available (padlocks and towels not included)."
@@ -88,19 +89,21 @@ en:
         - "The presence of animals in the house is not allowed. Any tenant who does not respect this rule will cancel their rental contract."
     insurance:
       title: Insurance
-      description: "Utopy hostel assumes no responsibility for theft, loss or damage to guests' personal belongings."
+      description: "Apart from exceptional circumstances, Utopy hostel accepts no responsibility for the theft, loss or damage of guests' personal belongings."
     force_majeure:
-      title:
+      title: "Force majeure"
       description: "Utopy hostel shall not be liable to its customers in the event of non-performance of its obligations due to force majeure. Cases of force majeure or fortuitous events are those usually recognized by the jurisprudence of the French Courts and Tribunals."
     data_privacy:
       title: Information Technology and Civil Liberties
       points:
         - "In application of the law L.78-17 of January 6, 1978, the customer is informed that information of a personal nature communicated to Utopy hostel is subject to computerized processing, unless the customer expressly objects."
         - "The customer has the right to access, rectify or delete any personal data at any time by contacting Utopy hostel."
-        - The information requested at the time of booking is essential for the proper processing of your request. Utopy hostel is the sole recipient of this information. Utopy hostel undertakes not to communicate to any third party the information you have entrusted to us."
+        - "The information requested at the time of booking is essential for the proper processing of your request. Utopy hostel is the sole recipient of this information. Utopy hostel undertakes not to communicate to any third party the information you have entrusted to us."
+        - "In order to respect your peace of mind and your communication choices, we would like to inform you of the existence of the Bloctel system. This free service enables you to oppose telephone canvassing. For more information and to register, please visit the official website http://www.bloctel.gouv.fr"
+        - "Following your reservation, you do not benefit from the 14-day cooling-off period. Your reservation is therefore firm and definitive. If you wish to cancel, please check the conditions of your booking."
     applicable_law:
       title: Applicable Law
-      description: "Any dispute, claim or litigation relating to the booking of a stay is subject to French law. The Tribunal d'Instance de Bayonne shall have exclusive jurisdiction."
+      description: "In the event of a dispute, and after having referred the matter to the professional's customer service department, any customer may refer the matter to a consumer mediator, within a maximum period of one year from the date of the written complaint, by registered letter to the professional. The coordinates of the mediator likely to be seized by the customer are as follows: BAYONNE MEDIATION, 32 rue du Hameau, 64200 BIARRITZ, www.bayonne-mediation.com"
   legal_mentions:
     title: Legal Mentions
     utopy_hostel:

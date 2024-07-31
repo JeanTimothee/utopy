@@ -26,6 +26,7 @@ fr:
     text_4_3: "Annulation gratuite : 5 jours avant votre date d'arrivée"
     text_4_4: "Assurez-vous des meilleurs prix en réservant sur notre site !"
     text_4_5: "Réservez vos cours de surf directement à la réception et bénéficiez de tarifs réduits avec notre partenaire Jo Moraiz Surf School."
+    text_4_6: "Les mineurs ne sont pas autorisés dans nos établissements."
     taxes: "Taxes et frais compris"
     coast:
       text_1: "Découvrez notre dortoir mixte de 15 personnes offrant une expérience de voyage sociale, confortable et économique. Nos lits box créent un cocon personnel spacieux équipé de rangement, lampe, prise, ventilateur et rideaux individuels. Un mélange parfait d'intimité et de convivialité pour un repos réparateur. Le linge de lit est inclus et des casiers sont à votre disposition (cadenas et seviettes non compris)."
@@ -88,7 +89,7 @@ fr:
         - "La présence d'animaux dans la maison n'est pas autorisée. Tout locataire qui ne respecte pas cette règle annule son contrat de location."
     insurance:
       title: Assurance
-      description: "Utopy hostel n'assume aucune responsabilité pour le vol, la perte ou l'endommagement d'objets personnels des locataires."
+      description: "Sauf exception Utopy hostel n'assume aucune responsabilité pour le vol, la perte ou l'endommagement d'objets personnels des locataires."
     force_majeure:
       title: Force majeure
       description: "Utopy hostel ne pourra être tenu responsable à l'égard de ses clients en cas d'inexécution de ses obligations pour événement de force majeure. Sont considérés comme cas de force majeure ou cas fortuit ceux habituellement reconnus par la jurisprudence des Cours et Tribunaux Français."
@@ -98,9 +99,11 @@ fr:
         - "En application de la loi L.78-17 du 6 janvier 1978, le client est informé que les informations à caractère nominatif communiquées à Utopy hostel font l'objet d'un traitement informatisé, sauf opposition expresse de sa part."
         - "Le client dispose à tout moment d'un droit d'accès, de rectification ou de suppression auprès d'Utopy hostel."
         - "Les informations qui vous sont demandées lors de la réservation sont indispensables pour le bon traitement de votre demande. Ces informations ont pour seul destinataire Utopy hostel. Utopy hostel s'engage à ne communiquer à aucun tiers les informations que vous lui aurez confiées."
+        - "Afin de respecter votre tranquillité et vos choix en matiére de communication, nous vous informons de l'existence du dispositif Bloctel. Ce service gratuit vous permet de vous opposer au démarchage téléphonique. Pour plus d'informations et pour vous inscrire, veuillez visiter le site officiel http://www.bloctel.gouv.fr"
+        - "Suite à votre réservation, vous ne bénéficiez pas du délai de rétractation de 14 jours. Votre réservation est donc ferme et définitive. Si vous souhaitez l'annuler, vérifiez les conditions de votre réservation."
     applicable_law:
       title: Droit applicable
-      description: "Tout différend, toute réclamation ou tout litige relatif aux modalités de réservation d'un séjour sont soumis au droit français. Seul le Tribunal d'Instance de Bayonne sera compétent."
+      description: "En cas de litige et après avoir saisi le service clientèle du professionnel, tout client a la possibilité de saisir un médiateur de la consommation, dans un délai maximal d'un an à compter de la date de la réclamation écrite, par LRAR, auprès de ce professionnel. Les coordonnées du médiateur susceptible d'être saisi par le client, sont les suivantes : BAYONNE MEDIATION, 32 rue du Hameau, 64200 BIARRITZ, www.bayonne-mediation.com"
   legal_mentions:
     title: Mentions Légales
     utopy_hostel:
